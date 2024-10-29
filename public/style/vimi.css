@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1,
+.logo-text h2 {
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 30px;
+    
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 10px 7px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #858df8;
+    color: white;
+}
+
+/* New styles for active state */
+nav a.active {
+    background-color: #858df8;
+    color: white;
+}
+
+/* Ensure hover effect doesn't override active state */
+nav a.active:hover {
+    background-color: #6369d1; /* Slightly darker shade for hover effect on active item */
+}
+
+/* Update dropdown styles to maintain active state */
+.dropdown-menu li a.active {
+    background-color: #858df8;
+    color: white;
+}
+
+.dropdown-menu li a.active:hover {
+    background-color: #6369d1;
+}
+
+/* Responsive styles update */
+@media (max-width: 768px) {
+    nav a.active,
+    .dropdown-menu li a.active {
+        background-color: #858df8;
+        color: white;
+    }
+}
+
+
+/* Warna dasar kuning untuk tombol */
+.edukasi-button {
+    background-color: #FFD700; /* Warna kuning */
+    color: #000; /* Warna teks hitam */
+    padding: 10px 20px; /* Spasi di dalam tombol */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: bold; /* Membuat teks tebal */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Efek hover lebih gelap */
+.edukasi-button:hover {
+    background-color: #DAA520; /* Warna kuning gelap saat hover */
+    color: #fff; /* Teks menjadi putih saat hover */
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+        width: 100%;
+        /* Ensure links take up full width on smaller screens */
+        box-sizing: border-box;
+    }
+
+    .dropdown-menu {
+        position: static;
+        /* Ensure dropdown stays within layout */
+        box-shadow: none;
+        width: 100%;
+        /* Full width dropdown for mobile */
+    }
+
+    .dropdown-menu li a {
+        width: 100%;
+        /* Full width dropdown items */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .logo-text h1,
+    .logo-text h2 {
+        font-size: 12px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        min-width: 100px;
+    }
+}
+
+/* Mobile Navigation Toggle (Optional) */
+.mobile-nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        /* Hide nav by default */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+        /* Show nav when active */
+    }
+}
+
+
+/* Add JavaScript to toggle the mobile nav */
+
+
+/* Image Banner Styles */
+.image-banner {
+    text-align: center;
+    margin-top: 10px; /* Margin above the banner */
+}
+
+.image-banner img {
+    width: 100%;
+    max-height: 300px; /* Maximum height for images */
+    object-fit: cover; /* Cover aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.visi-misi-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff, #e8efff);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 1.5s ease-out;
+}
+
+/* Keyframes untuk animasi dari bawah ke atas */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%); /* Mulai dari luar layar di bawah */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Kembali ke posisi aslinya */
+        opacity: 1;
+    }
+}
+
+/* Terapkan juga ke elemen lain jika diperlukan */
+.visi-misi-title, .visi-misi-description, .youtube-video, .youtube-link a {
+    animation: slideInUp 1.5s ease-out;
+}
+
+.youtube-link a {
+    animation: fadeIn 2s ease-in-out 0.5s; /* Tambahkan delay agar muncul setelah konten */
+}
+
+
+.visi-misi-content {
+    flex: 1;
+    padding-right: 40px;
+    z-index: 1;
+}
+
+.visi-misi-title {
+    font-size: 30px; /* Increased font size */
+    color: black; /* Color of the text */
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6); /* Gray shadow effect */
+    margin-bottom: 30px; /* Spacing below the title */
+   
+}
+
+.visi-misi-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.youtube-link {
+    width: 300px; /* Adjust width as needed */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.youtube-video {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+    
+}
+
+.youtube-video:hover {
+    transform: scale(1.05);
+}
+
+.youtube-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #404be9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.youtube-link a:hover {
+    background-color: #303cbf;
+    transform: translateY(-2px);
+}
+
+.background-shape {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(64, 75, 233, 0.1);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    z-index: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .visi-misi-section {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .visi-misi-content {
+        padding-right: 0; /* Remove padding on smaller screens */
+        margin-bottom: 20px; /* Add spacing below content */
+    }
+
+    .youtube-link {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .youtube-video {
+        height: 150px; /* Reduce video height on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .visi-misi-title {
+        font-size: 24px; /* Decrease title size for smaller screens */
+        margin-bottom: 20px; /* Reduce margin */
+    }
+
+    .visi-misi-description {
+        font-size: 14px; /* Decrease description font size */
+    }
+
+    .youtube-link a {
+        padding: 8px 16px; /* Adjust padding for buttons */
+    }
+}
+
+
+.sasaran-mutu {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.strategi-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    /* Allow items to wrap for smaller screens */
+}
+
+.strategi-item {
+    background-color: #232242;
+    /* Dark background color */
+    color: white;
+    /* White text */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Reduced padding inside the box */
+    width: 40%;
+    /* Smaller width for both boxes */
+    text-align: center;
+    /* Center the text */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for the box */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    /* Smooth hover effect and opacity transition */
+
+    /* Animation styles */
+    opacity: 0;
+    /* Start fully transparent */
+    transform: translateY(20px);
+    /* Start slightly lower */
+}
+
+.strategi-item.visible {
+    opacity: 1;
+    /* Become fully visible */
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Existing styles below... */
+
+
+.strategi-item:hover {
+    transform: translateY(-10px);
+    /* Lift the box slightly on hover */
+}
+
+.strategi-item i {
+    font-size: 35px;
+    /* Slightly smaller icon */
+    margin-bottom: 15px;
+    color: #404be9;
+    /* Icon color */
+}
+
+.strategi-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    /* Slightly smaller heading */
+}
+
+.strategi-item p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .strategi-items {
+        justify-content: center;
+        /* Center items on smaller screens */
+    }
+
+    .strategi-item {
+        width: 80%;
+        /* Increase width on smaller screens */
+        margin-bottom: 20px;
+        /* Add space between items */
+    }
+
+    .strategi-item i {
+        font-size: 30px;
+        /* Smaller icon for mobile */
+    }
+
+    .strategi-item h3 {
+        font-size: 20px;
+        /* Decrease heading size for mobile */
+    }
+
+    .strategi-item p {
+        font-size: 14px;
+        /* Decrease paragraph size for mobile */
+    }
+}
+
+
+.team {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    opacity: 0; /* Mulai dengan tidak terlihat */
+    transform: translateY(50px); /* Mulai dari bawah */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #404be9;
+    margin-right: 20px;
+}
+
+.member-info {
+    text-align: center;
+    flex: 1;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.member-info p {
+    font-size: 16px;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-member img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}
+
+
+.footer-distributed{
+    background: #4c5270;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  rgb(69, 29, 211);
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    background-color:  #6163da;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  rgb(20, 146, 219);
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:   #6163da;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+  .map-responsive {
+    position: relative;
+    padding-bottom: 35.55%; /* Aspect ratio for 450x160 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }

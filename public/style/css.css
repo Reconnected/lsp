@@ -1,0 +1,1649 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1,
+.logo-text h2 {
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 30px;
+    
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 10px 7px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #858df8;
+    color: white;
+}
+/* New styles for active state */
+nav a.active {
+    background-color: #858df8;
+    color: white;
+}
+
+/* Ensure hover effect doesn't override active state */
+nav a.active:hover {
+    background-color: #6369d1; /* Slightly darker shade for hover effect on active item */
+}
+
+/* Update dropdown styles to maintain active state */
+.dropdown-menu li a.active {
+    background-color: #858df8;
+    color: white;
+}
+
+.dropdown-menu li a.active:hover {
+    background-color: #6369d1;
+}
+
+/* Responsive styles update */
+@media (max-width: 768px) {
+    nav a.active,
+    .dropdown-menu li a.active {
+        background-color: #858df8;
+        color: white;
+    }
+}
+
+/* Warna dasar kuning untuk tombol */
+.edukasi-button {
+    background-color: #FFD700; /* Warna kuning */
+    color: #000; /* Warna teks hitam */
+    padding: 10px 20px; /* Spasi di dalam tombol */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: bold; /* Membuat teks tebal */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Efek hover lebih gelap */
+.edukasi-button:hover {
+    background-color: #DAA520; /* Warna kuning gelap saat hover */
+    color: #fff; /* Teks menjadi putih saat hover */
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+        width: 100%;
+        /* Ensure links take up full width on smaller screens */
+        box-sizing: border-box;
+    }
+
+    .dropdown-menu {
+        position: static;
+        /* Ensure dropdown stays within layout */
+        box-shadow: none;
+        width: 100%;
+        /* Full width dropdown for mobile */
+    }
+
+    .dropdown-menu li a {
+        width: 100%;
+        /* Full width dropdown items */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .logo-text h1,
+    .logo-text h2 {
+        font-size: 12px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        min-width: 100px;
+    }
+}
+
+/* Mobile Navigation Toggle (Optional) */
+.mobile-nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        /* Hide nav by default */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+        /* Show nav when active */
+    }
+}
+
+/* Add JavaScript to toggle the mobile nav */
+
+/* Image Banner Styles */
+/* Base Styles */
+
+/* Image Banner */
+.image-banner {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image-banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Infographics Styles */
+.infografis {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.infografis-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 20px;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.info-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-item p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+header::before {
+    content: '';
+    background-image: url('{{ gambar/bnsp.jpeg }}');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Banner Slider */
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px) brightness(50%);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    z-index: 1;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.banner-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #787fe9;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+
+/* Adjust for tablets (768px and below) */
+@media (max-width: 768px) {
+    .infografis {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infografis-container {
+        margin-top: 10px;
+    }
+
+    .info-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner-slider {
+        height: 400px;
+    }
+
+    .banner-text h1 {
+        font-size: 36px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+    }
+}
+
+/* Adjust for mobile (480px and below) */
+@media (max-width: 480px) {
+    .image-banner img {
+        max-height: 200px;
+    }
+
+    .banner-slider {
+        height: 300px;
+    }
+
+    .banner-text h1 {
+        font-size: 24px;
+    }
+
+    .banner-text p {
+        font-size: 13px;
+    }
+
+    .banner-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Base Styles */
+p {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    opacity: 0;
+    /* Initial state */
+    transform: translateY(20px);
+    /* Initial position */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* Smooth transition */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+
+/* Adjust for tablets (768px and below) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        /* Stack content vertically */
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        /* Full width for smaller screens */
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Add space below the image */
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+        /* Slightly smaller for tablet screens */
+    }
+
+    .about-text p {
+        font-size: 14px;
+        /* Reduce font size on smaller screens */
+    }
+}
+
+/* Adjust for mobile (480px and below) */
+@media (max-width: 480px) {
+    .about-us {
+        padding: 30px 10px;
+        /* Reduce padding on mobile */
+    }
+
+    .about-text h2 {
+        font-size: 20px;
+        /* Smaller title on mobile */
+    }
+
+    .about-text p {
+        font-size: 12px;
+        /* Adjust paragraph font size */
+    }
+}
+
+/* Animation visible class */
+.about-us.visible {
+    opacity: 1;
+    /* Show when visible */
+    transform: translateY(0);
+    /* Move to original position */
+    animation: bounceIn 0.6s ease-in-out forwards;
+    /* Apply bounce animation */
+}
+
+/* Profile LSP */
+.profile {
+    padding: 20px;
+    background-color: #f9f9f9;
+    opacity: 0; /* Start with invisible */
+    transform: translateY(20px); /* Start 20px lower */
+    animation: slideIn 0.5s forwards; /* Apply the animation */
+}
+
+.profile-image {
+    width: 100%;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.profile-content h2 {
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+    margin-bottom: 20px;
+}
+
+.profile-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start from 20px below */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-content h2 {
+        font-size: 24px; /* Smaller font size for headings on mobile */
+    }
+
+    .profile-content p {
+        font-size: 14px; /* Smaller font size for paragraphs on mobile */
+    }
+
+    .profile {
+        padding: 15px; /* Reduced padding on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-content h2 {
+        font-size: 20px; /* Further reduce heading size for small screens */
+    }
+
+    .profile-content p {
+        font-size: 12px; /* Further reduce paragraph size for small screens */
+    }
+
+    .profile {
+        padding: 10px; /* Further reduce padding on small devices */
+    }
+}
+
+
+/*selesai*/
+
+/* Base Styles */
+.news {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    /* Initial state */
+    transform: scale(0.5);
+    /* Start smaller */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* Smooth transition */
+}
+
+.news.visible {
+    opacity: 1;
+    /* Show when visible */
+    transform: scale(1);
+    /* Scale to original size */
+    animation: surpriseEffect 0.9s ease-in-out forwards;
+    /* Apply surprise animation */
+}
+
+@keyframes surpriseEffect {
+    0% {
+        opacity: 0;
+        /* Start fully transparent */
+        transform: scale(0.5);
+        /* Start smaller */
+    }
+
+    50% {
+        opacity: 1;
+        /* Midway, fully visible */
+        transform: scale(1.1);
+        /* Slightly larger */
+    }
+
+    100% {
+        transform: scale(1);
+        /* End at normal size */
+    }
+}
+
+
+/* Rest of your existing styles */
+.news h2 {
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allow cards to wrap on smaller screens */
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+    position: relative;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(128, 128, 128, 0.5);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.card-front {
+    background-color: #201c88;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+}
+
+.card-front h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.card-front p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.card-back {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card .read-more {
+    margin-top: 15px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    background-color: #201c88;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card .read-more:hover {
+    background-color: #303f88;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .news {
+        padding: 50px 15px;
+        /* Adjust padding to control space on the sides */
+    }
+
+    .card-container {
+        justify-content: flex-start;
+        /* Align cards to the left */
+        gap: 15px;
+        /* Add spacing between cards */
+        flex-wrap: wrap;
+        /* Allow cards to wrap on smaller screens */
+    }
+
+    .card {
+        width: 90%;
+        /* Set width to 90% for better centering */
+        max-width: 300px;
+        /* Limit the maximum width */
+        height: auto;
+        /* Allow flexible height */
+        margin-bottom: 20px;
+        /* Add space between cards */
+    }
+
+    .news h2 {
+        font-size: 24px;
+        /* Reduce font size for smaller screens */
+    }
+
+    .card-front h3 {
+        font-size: 1.3em;
+    }
+
+    .card-front p,
+    .card .read-more {
+        font-size: 1em;
+        /* Adjust font size for readability */
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .news {
+        padding: 50px 10px;
+        /* Reduce padding for mobile */
+    }
+
+    .card-container {
+        flex-direction: column;
+        /* Stack cards vertically on mobile */
+        align-items: flex-start;
+        /* Align cards to the left */
+        gap: 20px;
+        /* Add space between stacked cards */
+    }
+
+    .card {
+        width: 90%;
+        /* Set width to 90% for better centering */
+        max-width: 350px;
+        /* Limit the maximum width */
+        height: auto;
+        /* Remove fixed height for flexibility */
+        margin: 0 0 20px;
+        /* Center card and add bottom margin */
+    }
+
+    .news h2 {
+        font-size: 20px;
+        /* Further reduce title size */
+    }
+
+    .card-front h3 {
+        font-size: 1.1em;
+    }
+
+    .card-front p,
+    .card .read-more {
+        font-size: 0.9em;
+        /* Further adjust font size */
+    }
+}
+
+/* Our Values */
+/* Our Values */
+.values {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    margin: 0 auto;
+    /* Center the container */
+    max-width: 1200px;
+    /* Optional: Limit maximum width */
+    padding: 0 20px;
+    /* Optional: Add padding on left and right */
+}
+
+.value-item {
+    opacity: 0;
+    /* Start fully transparent */
+    transform: translateX(-20px);
+    /* Start slightly to the left */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Smooth transition */
+    width: 30%;
+    /* Default width for larger screens */
+    text-align: left;
+    padding: 0 10px;
+    /* Optional: for spacing within items */
+}
+
+.value-item.visible {
+    opacity: 1;
+    /* Become fully visible */
+    transform: translateX(0);
+    /* Move to original position */
+}
+
+.value-item i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .values {
+        justify-content: center;
+        /* Center items in smaller screens */
+        padding: 0 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .value-item {
+        width: calc(100% - 30px);
+        /* Full width minus padding */
+        margin-bottom: 20px;
+        /* Space between items */
+    }
+
+    .value-item i {
+        font-size: 30px;
+        /* Smaller icon size */
+    }
+
+    .value-item h3 {
+        font-size: 20px;
+        /* Smaller heading size */
+    }
+
+    .value-item p {
+        font-size: 14px;
+        /* Smaller paragraph size */
+    }
+}
+
+
+.container {
+    padding: 20px 0;
+    /* Added padding for top and bottom */
+    margin-top: 3px;
+    color: black;
+    /* Color of the text */
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+    /* Gray shadow effect */
+    margin-bottom: 30px;
+    /* Spacing below the title */
+    font-size: 15px;
+    /* Increased font size */
+}
+
+.container h1 {
+    font-size: 2.5em;
+    /* Increased font size */
+    color: black;
+    /* Color of the text */
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+    /* Gray shadow effect */
+    margin-bottom: 30px;
+    /* Spacing below the title */
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* Space between items */
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    /* Allow items to grow equally */
+    min-width: 200px;
+    /* Minimum width for items */
+}
+
+.stat-item h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.stat-item p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+/* Background pattern */
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6C63FF;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        font-size: 14px;
+        /* Decrease font size for smaller screens */
+    }
+
+    .container h1 {
+        font-size: 2em;
+        /* Decrease heading size */
+        margin-bottom: 20px;
+        /* Reduce spacing below title */
+    }
+
+    .stats {
+        gap: 20px;
+        /* Reduce space between items */
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+        justify-content: center;
+        /* Center items on smaller screens */
+    }
+
+    .stat-item {
+        display: flex;
+        /* Keep items in stat-item aligned horizontally */
+        flex-direction: column;
+        /* Stack elements within each item */
+        align-items: center;
+        /* Center align content within the stat item */
+    }
+
+    .stat-item h2 {
+        font-size: 36px;
+        /* Decrease stat heading size */
+        margin: 0;
+        /* Remove any default margin */
+    }
+
+    .stat-item p {
+        font-size: 16px;
+        /* Decrease stat paragraph size */
+        margin: 5px 0 0;
+        /* Keep some spacing */
+    }
+}
+
+
+.sasaran-mutu {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.strategi-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    /* Allow items to wrap for smaller screens */
+}
+
+.strategi-item {
+    background-color: #232242;
+    /* Dark background color */
+    color: white;
+    /* White text */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Reduced padding inside the box */
+    width: 40%;
+    /* Smaller width for both boxes */
+    text-align: center;
+    /* Center the text */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for the box */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    /* Smooth hover effect and opacity transition */
+
+    /* Animation styles */
+    opacity: 0;
+    /* Start fully transparent */
+    transform: translateY(20px);
+    /* Start slightly lower */
+}
+
+.strategi-item.visible {
+    opacity: 1;
+    /* Become fully visible */
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Existing styles below... */
+
+
+.strategi-item:hover {
+    transform: translateY(-10px);
+    /* Lift the box slightly on hover */
+}
+
+.strategi-item i {
+    font-size: 35px;
+    /* Slightly smaller icon */
+    margin-bottom: 15px;
+    color: #404be9;
+    /* Icon color */
+}
+
+.strategi-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    /* Slightly smaller heading */
+}
+
+.strategi-item p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .strategi-items {
+        justify-content: center;
+        /* Center items on smaller screens */
+    }
+
+    .strategi-item {
+        width: 80%;
+        /* Increase width on smaller screens */
+        margin-bottom: 20px;
+        /* Add space between items */
+    }
+
+    .strategi-item i {
+        font-size: 30px;
+        /* Smaller icon for mobile */
+    }
+
+    .strategi-item h3 {
+        font-size: 20px;
+        /* Decrease heading size for mobile */
+    }
+
+    .strategi-item p {
+        font-size: 14px;
+        /* Decrease paragraph size for mobile */
+    }
+}
+
+
+/* Informasi Items Styling */
+/* Container for the cards */
+.informasi-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Four columns */
+    gap: 20px;
+    /* Gap between each card */
+}
+
+/* Informasi Item (Card) Styling */
+.informasi-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    /* Use flexbox for vertical alignment */
+    flex-direction: column;
+    /* Stack child elements vertically */
+    height: 350px;
+    /* Set a fixed height for the card */
+    opacity: 0;
+    /* Start fully transparent */
+    transform: translateY(20px);
+    /* Start slightly lower */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.informasi-item.visible {
+    opacity: 1;
+    /* Become fully visible */
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Make the entire card clickable */
+.informasi-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    /* Make the link fill the card height */
+}
+
+/* Image Styling - set to cover the container */
+.informasi-image {
+    width: 100%;
+    /* Full width of the card */
+    height: 200px;
+    /* Set a fixed height for the image container */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.informasi-image img {
+    width: 100%;
+    /* Full width of the image container */
+    height: 100%;
+    /* Full height to cover the container */
+    object-fit: cover;
+    /* Cover the container while maintaining aspect ratio */
+}
+
+/* Add hover animation */
+.informasi-item:hover {
+    transform: translateY(-5px);
+    /* Lifts the card slightly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Adds stronger shadow */
+}
+
+/* Informasi Caption Styling */
+.informasi-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
+
+/* Informasi Content Styling */
+.informasi-content {
+    padding: 10px;
+    /* Adjust padding for content */
+    flex-grow: 1;
+    /* Allow content to grow and fill space */
+}
+
+.informasi-content h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Informasi Meta (Date and Icon) */
+.informasi-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.informasi-meta i {
+    margin-right: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .informasi-items {
+        grid-template-columns: repeat(3, 1fr);
+        /* Three columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .informasi-items {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .informasi-items {
+        grid-template-columns: 1fr;
+        /* Single column on extra small screens */
+    }
+}
+
+.pengurus-lsp {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pengurus-lsp h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Animation Keyframes */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Delay for items */
+.pengurus-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pengurus-item {
+    display: flex;
+    align-items: start;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease forwards;
+}
+
+/* Adding animation delay for each item to appear one by one */
+.pengurus-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.pengurus-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+.pengurus-item:nth-child(3) {
+    animation-delay: 0.9s;
+}
+.pengurus-item:nth-child(4) {
+    animation-delay: 1.2s;
+}
+/* Continue this for more items if needed */
+
+/* Styling for images and other elements */
+.pengurus-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.pengurus-info {
+    flex: 1;
+}
+
+.pengurus-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pengurus-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.read-more {
+    color: #404be9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.read-more i {
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pengurus-lsp h2 {
+        font-size: 28px;
+    }
+
+    .pengurus-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pengurus-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pengurus-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pengurus-lsp h2 {
+        font-size: 24px;
+    }
+
+    .pengurus-info h3 {
+        font-size: 16px;
+    }
+
+    .pengurus-info p {
+        font-size: 12px;
+    }
+
+    .read-more {
+        font-size: 12px;
+    }
+}
+
+
+
+.footer-distributed{
+  background: #4c5270;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  rgb(69, 29, 211);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #6163da;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  rgb(20, 146, 219);
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:   #6163da;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.map-responsive {
+    position: relative;
+    padding-bottom: 35.55%; /* Aspect ratio for 450x160 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
