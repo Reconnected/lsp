@@ -63,7 +63,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}" class="active">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +76,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +85,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -120,28 +120,30 @@ window.addEventListener('load', function() {
     <section class="profile">
         <div class="profile-content">
             <div class="profile-image">
-                <img src="{{ asset('gambar/lembaga.jpg') }}" alt="Profile Picture">
+                <img src="{{ asset('gambar/BannerLSP.jpg') }}" alt="Profile Picture">
             </div>
             <div class="profile-text">
-                <h2>Profil LSP Informatika Signal Teknindo</h2>
-                <p>Lembaga Sertifikasi Profesi (LSP) Informatika Signal Teknindo merupakan Lembaga Sertifikasi Profesi
-                    pihak ketiga (P3). Sebagai lembaga pendukung Badan Nasional Sertifikasi Profesi (BNSP) yang
-                    bertanggung jawab melaksanakan sertifikasi kompetensi profesi.</p>
-                <p>Pendirian LSP Informatika Signal Teknindo diawali dengan membentuk Panitia Kerja, pembentukan LSP
-                    Informatika Signal Teknindo oleh PPPTIE pada tanggal 14 September 2022 melalui SK No.
-                    002/SK-PPPTEI/IX/2022.</p>
-                <p>LSP Informatika Signal Teknindo bertujuan untuk melakukan sertifikasi sumber daya manusia di dalam
-                    industri Informatika. Pendirian LSP Informatika Signal Teknindo mendapatkan dukungan dari
-                    perkumpulan pendidik dan pemerhati pendidikan teknik industri elektronika.</p>
-                <p>LSP Informatika Signal Teknindo sebagai lembaga pendukung BNSP dan diberi lisensi oleh BNSP,
-                    bertanggung jawab melaksanakan sertifikasi kompetensi profesi. LSP Informatika Signal Teknindo
-                    bertugas mengembangkan skema sertifikasi, melaksanakan uji kompetensi, menerbitkan sertifikat
-                    kompetensi serta melakukan verifikasi tempat uji kompetensi.</p>
-                <p>Dalam melaksanakan tugas dan fungsinya, LSP Informatika Signal Teknindo mengacu kepada aturan BNSP
-                    dalam pedoman 201 dan 202 tahun 2014. Dalam pedoman tersebut ditetapkan persyaratan yang harus
-                    ditaati untuk menjamin agar lembaga sertifikasi di dalam menjalankan prosedur sertifikasi untuk
-                    pihak ketiga secara konsisten dan profesional.</p>
+                <h2>Profile LSP Signal Informatika Teknindo</h2>
+                <p>LSP Signal Informatika Teknindo dibentuk oleh asosiasi industri dan asosiasi profesi di bidang teknik informasi
+                    dan komunikasi, serta didukung oleh Perkumpulan Profesi Informatika dan Teknik Indonesia. LSP ini bertujuan untuk
+                    melakukan sertifikasi sumber daya manusia dalam industri Informatika. Pendirian LSP Signal Informatika Teknindo
+                    juga mendapat dukungan dari perkumpulan pendidik dan pemerhati pendidikan teknik industri elektronika.</p>
+                <p>Sebagai lembaga pendukung Badan Nasional Sertifikasi Profesi (BNSP) dan pemegang lisensi BNSP, LSP Signal
+                    Informatika Teknindo bertanggung jawab dalam pelaksanaan sertifikasi kompetensi profesi. LSP ini memiliki tugas
+                    untuk mengembangkan skema sertifikasi, melaksanakan uji kompetensi, menerbitkan sertifikat kompetensi, serta
+                    melakukan verifikasi tempat uji kompetensi.</p>
+                <p>Dalam menjalankan tugas dan fungsinya, LSP Signal Informatika Teknindo mengacu pada aturan BNSP yang tercantum
+                    dalam Pedoman BNSP 201 dan 202 tahun 2014. Pedoman ini menetapkan persyaratan yang harus dipenuhi untuk
+                    memastikan lembaga sertifikasi menjalankan prosedur sertifikasi bagi pihak ketiga secara konsisten dan
+                    profesional.</p>
+                <p>Dengan tujuh skema sertifikasi yang telah tersedia, LSP Signal Informatika Teknindo berkomitmen untuk terus
+                    berkembang seiring dengan kemajuan teknologi digital. Tujuan kami adalah memperkuat fondasi organisasi di tengah
+                    pesatnya arus transformasi digital, dengan menyediakan layanan inovatif dan solusi terbaik dalam pengembangan
+                    Sumber Daya Manusia (SDM). Kami menyadari bahwa di era digital ini, kesuksesan perusahaan tidak hanya bergantung
+                    pada teknologi yang dimiliki, tetapi juga pada kesiapan dan kompetensi SDM dalam menghadapi perubahan yang
+                    dinamis.</p>
             </div>
+            
         </div>
     </section>
 
@@ -195,7 +197,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>         
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">

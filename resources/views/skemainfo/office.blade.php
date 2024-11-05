@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset ('../gambar/lsp.png') }}">
+    <link rel="icon" href="{{ asset('../gambar/lsp.png') }}">
     <title>Lembaga Sertifikasi Profesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -25,10 +25,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -37,9 +39,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -63,7 +71,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +84,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +93,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -100,17 +108,17 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-});
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('load', function() {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }, 1500); // Adjust this value to control how long the loading screen shows
@@ -126,24 +134,61 @@ window.addEventListener('load', function() {
 
         <!-- Bagian Konten Informasi -->
         <div class="content">
-            <h1>Junior Office Specialist</h1>
-            <p>
-                Junior Office Specialist adalah posisi di bidang administrasi yang berperan penting dalam mengelola
-                tugas-tugas perkantoran sehari-hari. Mereka bertanggung jawab untuk memastikan bahwa dokumen-dokumen
-                kantor diatur dengan baik, mengkoordinasikan komunikasi internal dan eksternal, serta mendukung tim
-                dalam tugas administratif lainnya.
-            </p>
-            <p>
-                Sebagai seorang Junior Office Specialist, keterampilan yang dibutuhkan meliputi kemampuan komunikasi
-                yang baik, keterampilan organisasi yang luar biasa, serta kemampuan untuk bekerja secara efektif dalam
-                tim. Posisi ini juga membutuhkan pemahaman dasar tentang perangkat lunak perkantoran seperti Microsoft
-                Office dan alat-alat administrasi lainnya.
-            </p>
-            <p>
-                Selain itu, Junior Office Specialist juga bertugas dalam memastikan kelancaran operasional kantor dengan
-                menangani berbagai tugas termasuk manajemen jadwal, penyusunan laporan, pengelolaan dokumen, dan
-                dukungan bagi staf senior dalam proyek-proyek kantor.
-            </p>
+            <h1>JUNIOR OFFICE OPERATOR</h1>
+
+            <div class="section">
+                <div class="section-title">Deskripsi</div>
+                <p>Seorang Junior Office Operator bertanggung jawab mengoperasikan eksekusi kantor seperti printer dan
+                    scanner, serta mengangani percetakan dokumen, filling, spreadsheet, word processing yang mana
+                    pengolahan efektifitas dan efisiensi kerja, SOP penulisan, literasi digital telah sesuai dengan
+                    standar e-mail client serta kompetensi dasar OS pemulihan aplikasi.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Persyaratan Dasar Pemohon Sertifikasi</div>
+                <ul class="requirements">
+                    <li>Pria/Kata 3+4 (3 lembur)</li>
+                    <li>Copy identitas diri/KTP/SIM (1 lembar)</li>
+                    <li>Pas foto berwarna ukuran ijazah (1 lembar)</li>
+                    <li>Copy sertifikat yang relevan dengan Skema Sertifikasi Junior Office Operator bila ada</li>
+                    <li>Rekomendasi / keterangan yang relevan dari Skema Sertifikasi Junior Office Operator bila ada
+                    </li>
+                    <li>Portfolio yang relevan dengan Skema Sertifikasi Junior Office Operator bila ada</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Daftar Unit Kompetensi</div>
+                <ul>
+                    <li><span class="competency-code">J.620100.002.2</span> Menggunakan Peralatan Peripheral</li>
+                    <li><span class="competency-code">J.620100.005.2</span> Menggunakan Perangkat Lunak Pengolah Kata
+                    </li>
+                    <li><span class="competency-code">J.620100.006.2</span> Menggunakan Perangkat Lunak Lembar Sebaran
+                        (Spreadsheet)</li>
+                    <li><span class="competency-code">J.620100.008.2</span> Menggunakan Perangkat Lunak Presentasi
+                        Tingkat Dasar</li>
+                    <li><span class="competency-code">J.620100.008.2</span> Menggunakan Perangkat Lunak Surat Elektronik
+                        (E-Mail Client)</li>
+                    <li><span class="competency-code">J.620100.009.2</span> Menggunakan Aplikasi Berbasis Internet
+                        (Internet Based Applications Browser)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Metode Uji Kompetensi</div>
+                <div class="method-container">
+                    <div class="method-box">Metode Uji Kompetensi Langsung</div>
+                    <div class="method-box">Metode Uji Kompetensi Tak Langsung</div>
+                    <div class="method-box">Metode Uji Kompetensi Tambahan</div>
+                    <div class="method-box">Ceklist Observasi</div>
+                    <div class="method-box">Verifikasi Portofolio</div>
+                    <div class="method-box">• Daftar Pertanyaan Tertulis,
+                        dan/atau,<br>
+                        • Daftar Pertanyaan Lisan,
+                        dan/atau,<br>
+                        • Pertanyaan Wawancara</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -157,7 +202,7 @@ window.addEventListener('load', function() {
                         width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                
+
             </div>
 
             <!-- Moving the company name to a new div -->
@@ -198,7 +243,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
                     aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>

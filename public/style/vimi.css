@@ -70,7 +70,6 @@ nav a:hover {
     background-color: #858df8;
     color: white;
 }
-
 /* New styles for active state */
 nav a.active {
     background-color: #858df8;
@@ -101,7 +100,6 @@ nav a.active:hover {
     }
 }
 
-
 /* Warna dasar kuning untuk tombol */
 .edukasi-button {
     background-color: #FFD700; /* Warna kuning */
@@ -121,48 +119,84 @@ nav a.active:hover {
 
 
 /* Dropdown Styles */
+/* Gaya untuk dropdown */
+/* Dropdown Styles yang sudah diperbaiki */
+/* Dropdown Styles yang sudah diperbaiki */
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    list-style: none;
-    padding: 0;
-    min-width: 150px;
+    left: 50%;  /* Posisi dari tengah parent */
+    transform: translateX(-50%); /* Geser kembali setengah lebar dropdown */
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
-.dropdown-menu li {
-    padding: 10px;
-}
-
-.dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #f2f2f2;
+/* Panah kecil di atas dropdown */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;  /* Posisi dari tengah */
+    transform: translateX(-50%) rotate(45deg); /* Geser ke tengah dan rotasi */
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
-.dropdown-toggle::after {
-    content: " ▼";
-    font-size: 0.8rem;
-    margin-left: 5px;
+/* Menu Items Style */
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap; /* Mencegah text wrap */
+}
+
+.dropdown-menu a:hover {
+    background: #f8f9fa;
+    color: #858df8;
+}
+
+/* Garis pemisah antar menu items */
+.dropdown-menu li:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Active state */
+.dropdown-menu a.active {
+    background: #858df8;
+    color: white;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -195,17 +229,34 @@ nav a.active:hover {
 
     .dropdown-menu {
         position: static;
-        /* Ensure dropdown stays within layout */
+        transform: none;
         box-shadow: none;
         width: 100%;
-        /* Full width dropdown for mobile */
+        margin-top: 5px;
+        border: 1px solid #eee;
     }
 
-    .dropdown-menu li a {
-        width: 100%;
-        /* Full width dropdown items */
+    .dropdown-menu::before {
+        display: none;
+    }
+    
+    .dropdown-menu a {
+        padding: 10px 15px;
     }
 }
+/* Optional: Jika masih ada masalah dengan posisi di sisi kanan layar */
+.dropdown:last-child .dropdown-menu {
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+.dropdown:last-child .dropdown-menu::before {
+    left: auto;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
 
 @media (max-width: 480px) {
     .logo img {

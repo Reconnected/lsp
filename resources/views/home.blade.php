@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset ('gambar/lsp.png') }}">
+    <link rel="icon" href="{{ asset('gambar/lsp.png') }}">
     <title>Lembaga Sertifikasi Profesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -26,10 +26,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -38,17 +40,23 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 
 </head>
 
 <body>
-     <!-- Loading Overlay -->
-     <div id="loading-overlay">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
         <div class="spinner"></div>
     </div>
     <header>
@@ -59,13 +67,13 @@
                 <h2>Informatika Signal Teknindo</h2>
             </div>
         </a>
-    
+
         <nav>
             <a href="{{ route('home') }}" class="active">Beranda</a>
-    
+
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#Tentang Kami" class="dropdown-toggle">Tentang kami</a>
+                <a href="#Tentang Kami" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -73,77 +81,79 @@
                     <li><a href="{{ route('Asesor') }}">Asesor</a></li>
                 </ul>
             </div>
-    
+
             <a href="{{ route('informasi') }}">Informasi</a>
-    
+
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#sertifikasi" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#sertifikasi" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
                 </ul>
             </div>
-    
+
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-    
+
             <!-- New Edukasi 4 ID Button -->
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
-    
+
         <div class="date" id="currentDate"></div>
-    
+
         <!-- Button for Mobile Nav -->
         <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
     </header>
-    
+
 
     <script>
         // Toggle mobile navigation
         document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
         });
-        
+
 
         document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-});
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('load', function() {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }, 1500); // Adjust this value to control how long the loading screen shows
         });
     </script>
 
+
     <!-- Banner Slider Section -->
     <section class="banner-slider">
         <div class="slide active">
-            <img src="{{ asset('gambar/kantor1.jpg') }}" alt="Banner 1">
+            <img src="{{ asset('gambar/HeaderWeb1.jpg') }}" alt="Banner 1">
             <div class="banner-text">
-                <h1>LSP Informatika Signal Teknindo</h1>
-                <p>LSP Informatika Signal Teknindo sebagai sebuah lembaga sertifikasi<br> akan terus menjaga kepercayaan
-                    industri, pemerintah, dan masyarakat.</p>
-                <a href="#berita" class="banner-button">Our Case</a>
+                <h1>LSP Signal Informatika Teknindo</h1>
+                <p>LSP Informatika Signal Teknindo, sebagai sebuah lembaga sertifikasi,<br> akan terus menjaga
+                    kepercayaan dari industri, pemerintah, dan masyarakat.
+                </p>
             </div>
         </div>
         <div class="slide">
-            <img src="{{ asset('gambar/kantor2.jpg') }}" alt="Banner 2">
+            <img src="{{ asset('gambar/HeaderWeb2.jpg') }}" alt="Banner 2">
             <div class="banner-text">
                 <h1>Buktikan Kompetensi<br>
-                    dengan sertifikasi </h1>
-                <p>Sertifikat berguna sebagai bukti bahwa seseorang memiliki keterampilan tertentu. Dengan sertifikat
-                    tersebut, <br>pencari kerja akan memiliki daya saing tinggi, karyawan akan mendapatkan gaji dan
-                    promosi yang sesuai</p>
-                <a href="#berita" class="banner-button">Our Case</a>
+                    dengan Sertifikasi </h1>
+                <p>Sertifikat berfungsi sebagai bukti bahwa seseorang memiliki keterampilan khusus. Dengan memiliki
+                    sertifikat tersebut, <br>pencari kerja akan memiliki daya saing yang lebih tinggi, serta peluang
+                    promosi yang sesuai.
+
+                </p>
             </div>
         </div>
         <div class="navigation">
@@ -160,7 +170,7 @@ window.addEventListener('load', function() {
             </div>
             <div class="about-text fade-in">
                 <h2>Tentang Kami</h2>
-                <p>LSP Informatika Signal Teknindo adalah lembaga sertifikasi profesi yang berfokus pada pengembangan
+                <p>LSP Signal Informatika Teknindo adalah lembaga sertifikasi profesi yang berfokus pada pengembangan
                     keterampilan dan sertifikasi kompetensi. Kami bekerja sama dengan berbagai industri untuk
                     meningkatkan daya saing tenaga kerja dan menciptakan standar yang diakui secara nasional maupun
                     internasional.</p>
@@ -583,7 +593,7 @@ window.addEventListener('load', function() {
                         width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                
+
             </div>
 
             <!-- Moving the company name to a new div -->
@@ -599,7 +609,8 @@ window.addEventListener('load', function() {
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>Komplek Ruko Plaza Indah Bogor B-2 Jl. KH.</span> Sholeh Iskandar - Kedungbadak, Kota Bogor.</p>
+                <p><span>Komplek Ruko Plaza Indah Bogor B-2 Jl. KH.</span> Sholeh Iskandar - Kedungbadak, Kota Bogor.
+                </p>
             </div>
 
             <div>
@@ -623,9 +634,10 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                    aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                </a>         
+                </a>
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -633,7 +645,7 @@ window.addEventListener('load', function() {
         </div>
 
     </footer>
-    
+
 
 
 </body>

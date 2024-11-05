@@ -63,7 +63,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}" class="active">Visi & Misi</a></li>
@@ -76,7 +76,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +85,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -144,7 +144,59 @@ window.addEventListener('load', function() {
             <a href="https://www.youtube.com/watch?v=w0RGnXpf9LU" target="_blank">Tonton di YouTube</a>
         </div>
     </div>
+    <section class="team">
+        <h2>Our Team</h2>
+        <div class="team-container">
 
+            <div class="team-member ">
+                <img src="{{ asset('gambar/michael.png') }}" alt="A'la Edena Dharma Putri">
+                <div class="member-info">
+                    <h3>Michael S Sunggiardi</h3>
+                    <p>Dewan Pengarah</p>
+                </div>
+            </div>
+
+            <div class="team-member ">
+                <img src="{{ asset('gambar/hani.png') }}" alt="A'la Edena Dharma Putri">
+                <div class="member-info">
+                    <h3>Hani Purnawanti</h3>
+                    <p>Anggota Dewan Pengarah</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="{{ asset('gambar/ramadin.jpg') }}" alt="Ramadin Tarigan">
+                <div class="member-info">
+                    <h3>Ramadin Tarigan</h3>
+                    <p>Ketua LSP Informatika Signal Teknindo</p>
+                </div>
+            </div>
+
+            <div class="team-member reverse">
+                <img src="{{ asset('gambar/olan.jpg') }}" alt="Tuahta Hasiholan Pinem">
+                <div class="member-info">
+                    <h3>Tuahta Hasiholan Pinem</h3>
+                    <p>Manajer Sertifikasi</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="{{ asset('gambar/verra.jpg') }}" alt="Verra Rousmawati">
+                <div class="member-info">
+                    <h3>Verra Rousmawati</h3>
+                    <p>Manajer Manajemen Mutu</p>
+                </div>
+            </div>
+
+            <div class="team-member reverse">
+                <img src="{{ asset('gambar/Ika_Nuria_Rahmawati__A.Md.M..png') }}" alt="A'la Edena Dharma Putri">
+                <div class="member-info">
+                    <h3>Ika Nuria Rahmawati</h3>
+                    <p>Anggota Administrasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Sasaran Mutu dan Strategi Section -->
     <section class="sasaran-mutu">
         <div class="container">
@@ -191,43 +243,6 @@ window.addEventListener('load', function() {
         });
     </script>
 
-    <section class="team">
-        <h2>Our Team</h2>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="{{ asset('gambar/ramadin.jpg') }}" alt="Ramadin Tarigan">
-                <div class="member-info">
-                    <h3>Ramadin Tarigan</h3>
-                    <p>Ketua LSP Informatika Signal Teknindo</p>
-                </div>
-            </div>
-
-            <div class="team-member reverse">
-                <img src="{{ asset('gambar/olan.jpg') }}" alt="Tuahta Hasiholan Pinem">
-                <div class="member-info">
-                    <h3>Tuahta Hasiholan Pinem</h3>
-                    <p>Manajer Sertifikasi</p>
-                </div>
-            </div>
-
-            <div class="team-member">
-                <img src="{{ asset('gambar/verra.jpg') }}" alt="Verra Rousmawati">
-                <div class="member-info">
-                    <h3>Verra Rousmawati</h3>
-                    <p>Manajer Manajemen Mutu</p>
-                </div>
-            </div>
-
-            <div class="team-member reverse">
-                <img src="{{ asset('gambar/ala.jpg') }}" alt="A'la Edena Dharma Putri">
-                <div class="member-info">
-                    <h3>A'la Edena Dharma Putri</h3>
-                    <p>Anggota Administrasi</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
     const teamMembers = document.querySelectorAll('.team-member');
@@ -305,7 +320,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>         
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">

@@ -15,22 +15,22 @@ class PesanController extends Controller
 
     // Store the new pesan
     public function store(Request $request)
-{
-    // Validate the input data
-    $validatedData = $request->validate([
-        'nama' => 'required|string',
-        'email' => 'required|email|unique:pesan,email',
-        'alamat' => 'required|string',
-        'pesan' => 'required|string',
-    ]);
+    {
+        // Validate the input data
+        $validatedData = $request->validate([
+            'nama' => 'required|string',
+            'email' => 'required|email|unique:pesan,email',
+            'alamat' => 'required|string',
+            'no_telepon' => 'required|string', // Add validation for phone number
+            'pesan' => 'required|string',
+        ]);
 
-    // Create a new pesan instance
-    Pesan::create($validatedData);
+        // Create a new pesan instance
+        Pesan::create($validatedData);
 
-    // Redirect to the Kontak Kami page with success message
-    return redirect()->route('kontakkami')->with('success', 'Pesan created successfully!');
-}
-
+        // Redirect to the Kontak Kami page with success message
+        return redirect()->route('kontakkami')->with('success', 'Pesan created successfully!');
+    }
 
     // Show all pesans
     public function index()

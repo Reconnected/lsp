@@ -63,7 +63,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +76,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +85,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -118,90 +118,59 @@ window.addEventListener('load', function() {
     </script>
     </script>
 
-    <section class="profile">
-        <div class="profile-content">
-            <div class="informasi-content">
-                <h2>Sertifikasi Kompetensi Penting untuk Kamu</h2>
-            </div>
-            <div class="profile-image">
-                <img src="{{ asset('gambar/skil.jpg') }}" alt="Profile Picture">
-            </div>
-            <div class="informasi-content">
-                <p>Pengertian dari sertifikasi kompetensi adalah suatu pengakuan terhadap tenaga kerja yang memiliki
-                    keterampilan, pengetahuan, dan sikap kerja sesuai dengan standar kompetensi yang dipersyaratkan.</p>
-                <p>Dengan adanya sertifikasi ini, tenaga kerja atau pemilik sertifikat dijamin memiliki kredibilitas
-                    kerja yang sesuai dengan tugas dan tanggung jawabnya.</p>
-                <p>Sertifikasi profesional juga merupakan sertifikasi kerja yang dibutuhkan untuk mendapatkan atau
-                    meningkatkan kompetensi di bidang tertentu. Sertifikasi ini dikeluarkan oleh Lembaga Sertifikasi
-                    Profesi (LSP) yang sudah diakreditasi oleh Badan Nasional Sertifikasi Profesi (BNSP).</p>
-                <p>Dalam persaingan industri dan ketenagakerjaan yang ketat, sertifikasi kompetensi menjadi sangat
-                    penting. Sertifikat ini menunjukkan bahwa seseorang berkompeten di bidangnya, memudahkan perusahaan
-                    dalam memilih pekerja yang sesuai dengan kebutuhan.</p>
-                <p>Sertifikasi BNSP harus dimiliki untuk meningkatkan kredibilitas dalam bidang pekerjaan. Sertifikat
-                    ini bermanfaat untuk mengukur kemampuan di bidang tertentu, membantu pekerja memahami batasan dan
-                    kekurangannya, serta meningkatkan kemampuan agar tetap bersaing.</p>
-                <p>Dengan sertifikat BNSP, kemampuan Anda diakui oleh penguji yang berkompeten, yang akan menambah nilai
-                    positif saat melamar di suatu perusahaan. Hal ini juga meningkatkan kepercayaan diri, yang
-                    berpengaruh pada hasil kerja yang lebih baik.</p>
-                <p>Sertifikat kompetensi ini diakui secara global, yang akan meningkatkan peluang untuk bekerja di
-                    perusahaan bonafide, sekaligus memperkuat penilaian perusahaan terhadap Anda dibandingkan pekerja
-                    yang tidak memiliki sertifikat.</p>
-                <br>
-                <h2>Sertifikasi Kompetensi Meningkatkan Profesionalisme Kerja</h2>
-                <p>Selain hanya untuk memperlancar urusan administrasi dan memudahkan perusahaan dalam memilah serta
-                    menyaring pekerjanya, berikut beberapa alasan pentingnya memiliki sertifikat profesi baik bagi
-                    perusahaan maupun karyawan:</p>
-
-                <p>1. Karyawan memahami standar dalam melakukan pekerjaan yang baik sesuai bidangnya. Sebelum
-                    mendapatkan sertifikat kompetensi kerja, pekerja harus mengikuti pelatihan untuk bekerja dengan baik
-                    dan profesional.</p>
-
-                <p>2. Karyawan memiliki nilai jual dan daya saing yang tinggi. Ketika seorang pekerja memiliki
-                    sertifikat profesi, perusahaan akan lebih mempertimbangkannya.</p>
-
-                <p>3. Jenjang karir seorang pekerja menjadi lebih baik. Biasanya, untuk memperlancar karir, seorang
-                    pekerja harus memiliki sertifikat kompetensi kerja agar perusahaan lebih yakin.</p>
-
-                <p>4. Perusahaan akan meningkatkan produktivitasnya jika mempekerjakan karyawan yang sudah berkompetensi
-                    di bidangnya, sehingga pekerjaan dapat diselesaikan dengan standar berkualitas.</p>
-
-                <p>5. Kesalahan kerja akan berkurang. Pekerja yang memiliki sertifikat profesi cenderung lebih
-                    profesional, sehingga kesalahan kerja akan lebih jarang terjadi.</p>
-
-                <p>Untuk Anda yang masih fresh graduate, tidak masalah jika ingin mencari sertifikat ini. Anda bisa
-                    mengikuti sertifikasi BNSP secara online yang diselenggarakan oleh lembaga pelatihan secara virtual.
-                    Dengan memiliki sertifikasi kompetensi, perusahaan akan mempertimbangkan Anda walaupun masih fresh
-                    graduate.</p>
-
-                <p>Jika Anda sedang bingung mencari sertifikasi kompetensi, Anda bisa mengunjungi <a
-                        href="https://sertifikasiku.com">sertifikasiku.com</a>, yang menyediakan berbagai produk
-                    sertifikasi kompetensi yang dapat membantu karir Anda.</p>
-
-
-
-                <p><strong>Sumber: BNSP</strong></p>
-            </div>
-
-            <div class="publication-details">
-                <p>Published on: <strong>04 October 2024</strong></p>
-                <p>Publisher: <strong>Rishqi</strong></p>
-            </div>
+    <section class="informasi">
+        <div class="header">
+            <img src="{{ asset('gambar/skil.jpg') }}" alt="Profile Picture">
+        </div>
+        <div class="content">
+            <h1>Sertifikasi Kompetensi Penting untuk Kamu</h1>
+            <p>Pengertian dari sertifikasi kompetensi adalah suatu pengakuan terhadap tenaga kerja yang memiliki keterampilan, pengetahuan, dan sikap kerja sesuai dengan standar kompetensi yang dipersyaratkan.</p>
+            <p>Dengan adanya sertifikasi ini, tenaga kerja atau pemilik sertifikat dijamin memiliki kredibilitas kerja yang sesuai dengan tugas dan tanggung jawabnya.</p>
+            <p>Sertifikasi profesional juga merupakan sertifikasi kerja yang dibutuhkan untuk mendapatkan atau meningkatkan kompetensi di bidang tertentu. Sertifikasi ini dikeluarkan oleh Lembaga Sertifikasi Profesi (LSP) yang sudah diakreditasi oleh Badan Nasional Sertifikasi Profesi (BNSP).</p>
+            <p>Dalam persaingan industri dan ketenagakerjaan yang ketat, sertifikasi kompetensi menjadi sangat penting. Sertifikat ini menunjukkan bahwa seseorang berkompeten di bidangnya, memudahkan perusahaan dalam memilih pekerja yang sesuai dengan kebutuhan.</p>
+            <p>Sertifikasi BNSP harus dimiliki untuk meningkatkan kredibilitas dalam bidang pekerjaan. Sertifikat ini bermanfaat untuk mengukur kemampuan di bidang tertentu, membantu pekerja memahami batasan dan kekurangannya, serta meningkatkan kemampuan agar tetap bersaing.</p>
+            <p>Dengan sertifikat BNSP, kemampuan Anda diakui oleh penguji yang berkompeten, yang akan menambah nilai positif saat melamar di suatu perusahaan. Hal ini juga meningkatkan kepercayaan diri, yang berpengaruh pada hasil kerja yang lebih baik.</p>
+            <p>Sertifikat kompetensi ini diakui secara global, yang akan meningkatkan peluang untuk bekerja di perusahaan bonafide, sekaligus memperkuat penilaian perusahaan terhadap Anda dibandingkan pekerja yang tidak memiliki sertifikat.</p>
+    
+            <h2>Sertifikasi Kompetensi Meningkatkan Profesionalisme Kerja</h2>
+            <p>Selain hanya untuk memperlancar urusan administrasi dan memudahkan perusahaan dalam memilah serta menyaring pekerjanya, berikut beberapa alasan pentingnya memiliki sertifikat profesi baik bagi perusahaan maupun karyawan:</p>
+    
+            <ol>
+                <li>Karyawan memahami standar dalam melakukan pekerjaan yang baik sesuai bidangnya. Sebelum mendapatkan sertifikat kompetensi kerja, pekerja harus mengikuti pelatihan untuk bekerja dengan baik dan profesional.</li>
+                <li>Karyawan memiliki nilai jual dan daya saing yang tinggi. Ketika seorang pekerja memiliki sertifikat profesi, perusahaan akan lebih mempertimbangkannya.</li>
+                <li>Jenjang karir seorang pekerja menjadi lebih baik. Biasanya, untuk memperlancar karir, seorang pekerja harus memiliki sertifikat kompetensi kerja agar perusahaan lebih yakin.</li>
+                <li>Perusahaan akan meningkatkan produktivitasnya jika mempekerjakan karyawan yang sudah berkompetensi di bidangnya, sehingga pekerjaan dapat diselesaikan dengan standar berkualitas.</li>
+                <li>Kesalahan kerja akan berkurang. Pekerja yang memiliki sertifikat profesi cenderung lebih profesional, sehingga kesalahan kerja akan lebih jarang terjadi.</li>
+            </ol>
+    
+            <p>Untuk Anda yang masih fresh graduate, tidak masalah jika ingin mencari sertifikat ini. Anda bisa mengikuti sertifikasi BNSP secara online yang diselenggarakan oleh lembaga pelatihan secara virtual. Dengan memiliki sertifikasi kompetensi, perusahaan akan mempertimbangkan Anda walaupun masih fresh graduate.</p>
+    
+            <p>Jika Anda sedang bingung mencari sertifikasi kompetensi, Anda bisa mengunjungi <a href="https://sertifikasiku.com">sertifikasiku.com</a>, yang menyediakan berbagai produk sertifikasi kompetensi yang dapat membantu karir Anda.</p>
+    
+            <p><strong>Sumber: BNSP</strong></p>
+        </div>
+    
+        <div class="publication-details">
+            <p>Published on: <strong>04 October 2024</strong></p>
+            <p>Publisher: <strong>Rishqi</strong></p>
         </div>
     </section>
+    
 
 
 
     <footer class="footer-distributed">
 
-        <div class="footer-map">
-            <div class="map-responsive">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d368.349598346712!2d106.79010131913942!3d-6.561388742766948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c416cbdea47b%3A0x9cc185c252b63a14!2sPT%20Bonet%20Utama%20(Internet%20Bogor)!5e1!3m2!1sid!2sid!4v1728368202127!5m2!1sid!2sid"
-                    width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer-left">
+            <div class="footer-map">
+                <div class="map-responsive">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d368.349598346712!2d106.79010131913942!3d-6.561388742766948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c416cbdea47b%3A0x9cc185c252b63a14!2sPT%20Bonet%20Utama%20(Internet%20Bogor)!5e1!3m2!1sid!2sid!4v1728368202127!5m2!1sid!2sid"
+                        width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
             </div>
-            
-        </div>
 
             <!-- Moving the company name to a new div -->
             <div class="footer-company-name-container">
@@ -240,7 +209,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>         
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">

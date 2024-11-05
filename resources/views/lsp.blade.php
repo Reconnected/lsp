@@ -63,7 +63,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +76,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +85,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -124,8 +124,8 @@ window.addEventListener('load', function() {
                 <img src="{{ asset('gambar/ramadin.jpg') }}" alt="Ramadin Tarigan">
                 <div class="pengurus-info">
                     <h3>Ramadin Tarigan</h3>
-                    <p>Ketua LSP Informatika Signal Teknindo</p>
-                    <p>Melaksanakan program kerja LSP Informatika Signal Teknindo, Melakukan monitoring dan evaluasi,
+                    <p>Ketua LSP Signal Informatika Teknindo</p>
+                    <p>Melaksanakan program kerja LSP Signal Informatika Teknindo, Melakukan monitoring dan evaluasi,
                         Menyiapkan...</p>
                 </div>
             </div>
@@ -145,15 +145,15 @@ window.addEventListener('load', function() {
                 <div class="pengurus-info">
                     <h3>Verra Rousmawati</h3>
                     <p>Manajer Manajemen Mutu</p>
-                    <p>Menerapkan dan mengembangkan sistem manajemen mutu LSP Informatika Signal Teknindo sesuai Pedoman
+                    <p>Menerapkan dan mengembangkan sistem manajemen mutu LSP Signal Informatika Teknindo sesuai Pedoman
                         BNSP...</p>
                 </div>
             </div>
 
             <div class="pengurus-item">
-                <img src="{{ asset('gambar/ala.jpg') }}" alt="A'la Edena Dharma Putri">
+                <img src="{{ asset('gambar/Ika_Nuria_Rahmawati__A.Md.M..png') }}" alt="A'la Edena Dharma Putri">
                 <div class="pengurus-info">
-                    <h3>A'la Edena Dharma Putri</h3>
+                    <h3>Ika Nuria Rahmawati</h3>
                     <p>Anggota Administrasi</p>
                     <p>Memfasilitasi unsur-unsur organisasi LSP guna terselenggaranya program sertifikasi profesi...</p>
                 </div>
@@ -212,7 +212,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>         
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">

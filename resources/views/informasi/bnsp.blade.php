@@ -62,7 +62,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -75,7 +75,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -84,7 +84,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -117,26 +117,27 @@ window.addEventListener('load', function() {
         });
     </script>
 
-    <section class="profile">
-        <div class="profile-content">
-            <div class="informasi-content">
-                <h2>Badan Nasional Sertifikasi Profesi (BNSP)</h2>
-            </div>
-            <div class="profile-image">
-                <img src="{{ asset('gambar/sertifikasi.jpg') }}" alt="Profile Picture">
-            </div>
-            <div class="informasi-content">
-                <p>BNSP merupakan badan independen yang bertanggung jawab kepada Presiden yang memiliki kewenangan sebagai otoritas sertifikasi personil dan bertugas melaksanakan sertifikasi kompetensi profesi bagi tenaga kerja.</p>
-                <p>Badan Nasional Sertifikasi Profesi disingkat (BNSP) adalah sebuah lembaga independen yang dibentuk pemerintah untuk melaksanakan ketentuan Pasal 18 ayat (5) Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan. Badan ini bekerja untuk menjamin mutu kompetensi dan pengakuan tenaga kerja pada seluruh sektor bidang profesi di Indonesia melalui proses sertifikasi kompetensi kerja bagi tenaga kerja, baik yang berasal dari lulusan pelatihan kerja maupun dari pengalaman kerja.</p>
-                <p>Tugas pokok dan fungsi BNSP sebagai otoritas sertifikasi personel sesuai Peraturan Pemerintah Nomor 23 Tahun 2004 tentang Badan Nasional Sertifikasi Profesi, utamanya pasal 4 Ayat 1): Guna terlaksananya tugas sertifikasi kompetensi kerja sebagaimana dimaksud dalam Pasal 3, BNSP dapat memberikan lisensi kepada lembaga sertifikasi profesi yang memenuhi persyaratan yang ditetapkan untuk melaksanakan sertifikasi kompetensi kerja. Ayat 2): Ketentuan mengenai persyaratan dan tata cara pemberian lisensi lembaga sertifikasi profesi sebagaimana dimaksud dalam ayat 1) ditetapkan lebih lanjut oleh BNSP.</p>
-                <p><strong>Sumber: BNSP</strong></p>
-            </div>            
-            <div class="publication-details">
-                <p>Published on: <strong>04 October 2024</strong></p>
-                <p>Publisher: <strong>Rishqi</strong></p>
-            </div>
+<section class="informasi">
+    <div class="profile-content">
+        <div class="informasi-content">
         </div>
-    </section>
+        <div class="profile-image">
+            <img src="{{ asset('gambar/sertifikasi.jpg') }}" alt="Profile Picture">
+        </div>
+        <div class="informasi-content">
+            <h1>Badan Nasional Sertifikasi Profesi (BNSP)</h1>
+            <p>BNSP merupakan badan independen yang bertanggung jawab kepada Presiden yang memiliki kewenangan sebagai otoritas sertifikasi personil dan bertugas melaksanakan sertifikasi kompetensi profesi bagi tenaga kerja.</p>
+            <p>Badan Nasional Sertifikasi Profesi disingkat (BNSP) adalah sebuah lembaga independen yang dibentuk pemerintah untuk melaksanakan ketentuan Pasal 18 ayat (5) Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan. Badan ini bekerja untuk menjamin mutu kompetensi dan pengakuan tenaga kerja pada seluruh sektor bidang profesi di Indonesia melalui proses sertifikasi kompetensi kerja bagi tenaga kerja, baik yang berasal dari lulusan pelatihan kerja maupun dari pengalaman kerja.</p>
+            <p>Tugas pokok dan fungsi BNSP sebagai otoritas sertifikasi personel sesuai Peraturan Pemerintah Nomor 23 Tahun 2004 tentang Badan Nasional Sertifikasi Profesi, utamanya pasal 4 Ayat 1): Guna terlaksananya tugas sertifikasi kompetensi kerja sebagaimana dimaksud dalam Pasal 3, BNSP dapat memberikan lisensi kepada lembaga sertifikasi profesi yang memenuhi persyaratan yang ditetapkan untuk melaksanakan sertifikasi kompetensi kerja. Ayat 2): Ketentuan mengenai persyaratan dan tata cara pemberian lisensi lembaga sertifikasi profesi sebagaimana dimaksud dalam ayat 1) ditetapkan lebih lanjut oleh BNSP.</p>
+            <p><strong>Sumber: BNSP</strong></p>
+        </div>
+        <div class="publication-details">
+            <p>Published on: <strong>04 October 2024</strong></p>
+            <p>Publisher: <strong>Rishqi</strong></p>
+        </div>
+    </div>
+</section>
+
 
 
     <footer class="footer-distributed">
@@ -189,7 +190,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>         
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">

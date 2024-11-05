@@ -64,7 +64,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -77,7 +77,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -86,7 +86,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}" class="active">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -123,7 +123,7 @@ window.addEventListener('load', function() {
         <!-- Kartu Kontak Kiri -->
         <div class="kontak-card">
             <h2>Kontak</h2>
-            <p>Jika Anda memiliki pertanyaan lebih lanjut mengenai LSP Informatika Signal Teknindo atau program yang
+            <p>Jika Anda memiliki pertanyaan lebih lanjut mengenai LSP Signal Informatika Teknindo atau program yang
                 kami tawarkan, silahkan menghubungi kami:</p>
             <div class="divider"></div>
             <div class="kontak-info">
@@ -158,11 +158,16 @@ window.addEventListener('load', function() {
                     <input type="text" id="alamat" name="alamat" required>
                 </div>
                 <div>
+                    <label for="no_telepon">Phone Number:</label>
+                    <input type="tel" id="no_telepon" name="no_telepon" required>
+                </div>
+                <div>
                     <label for="pesan">Message:</label>
                     <textarea id="pesan" name="pesan" required></textarea>
                 </div>
                 <button type="submit">Create Pesan</button>
             </form>
+            
         </div>
     </div>
     
@@ -272,7 +277,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
                     aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>

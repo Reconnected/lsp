@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset ('../gambar/lsp.png') }}">
+    <link rel="icon" href="{{ asset('../gambar/lsp.png') }}">
     <title>Lembaga Sertifikasi Profesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -25,10 +25,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -37,9 +39,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -63,7 +71,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +84,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +93,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -100,17 +108,17 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-});
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('load', function() {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }, 1500); // Adjust this value to control how long the loading screen shows
@@ -121,41 +129,82 @@ window.addEventListener('load', function() {
     <div class="container">
         <!-- Bagian Gambar di atas -->
         <div class="header">
-            <img src="{{ asset('../gambar/junior_ofice.jpeg') }}" alt="Junior Office Specialist">
+            <img src="{{ asset('../gambar/junior_mobile.jpeg') }}" alt="Junior Office Specialist">
         </div>
 
         <!-- Bagian Konten Informasi -->
         <div class="content">
-            <h1>Junior Mobile Programmer</h1>
-            <p>
-                Junior Mobile Programmer adalah posisi yang sangat dibutuhkan dalam industri pengembangan aplikasi, 
-                khususnya di platform mobile. Mereka bertanggung jawab untuk merancang, mengembangkan, dan memelihara 
-                aplikasi mobile yang intuitif dan user-friendly untuk perangkat iOS dan Android.
-            </p>
-            <p>
-                Sebagai seorang Junior Mobile Programmer, keterampilan yang dibutuhkan mencakup pemahaman yang baik 
-                tentang bahasa pemrograman seperti Java, Swift, atau Kotlin. Kemampuan untuk bekerja dengan framework 
-                pengembangan aplikasi mobile seperti React Native atau Flutter juga sangat dihargai.
-            </p>
-            <p>
-                Selain itu, Junior Mobile Programmer juga harus memiliki keterampilan dalam debugging, pengujian, 
-                dan penyelesaian masalah, serta mampu berkolaborasi dengan tim pengembang lainnya untuk menciptakan 
-                aplikasi yang memenuhi kebutuhan pengguna dan standar industri.
-            </p>
-        </div>        
+            <h1>JUNIOR MOBILE PROGRAMMER</h1>
+
+            <div class="section">
+                <div class="section-title">Deskripsi</div>
+                <p>Seorang Mobile Application Developer bertanggung jawab atas berbagai aspek pengembangan aplikasi
+                    mobile. Mereka harus menunjukkan pemahaman tentang platform operating system dan bahasa pemrograman
+                    yang digunakan dalam aplikasi perangkat mobile. Selain itu, mereka merancang database dan data
+                    persistence untuk memastikan data mobile tersimpan dengan aman dan efisien.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Persyaratan Dasar Pemohon Sertifikasi</div>
+                <ul class="requirements">
+                    <li>Pas foto 3x4 (3 lembar)</li>
+                    <li>Copy identitas diri KTP / KK (1 lembar)</li>
+                    <li>Copy ijazah terakhir / Surat Keterangan Lulus (1 lembar)</li>
+                    <li>Copy sertifikat yang relevan dengan Skema Sertifikasi Junior Mobile Programmer, bila ada</li>
+                    <li>CV pengalaman kerja yang relevan dengan Skema Sertifikasi Junior Mobile Programmer, bila ada
+                    </li>
+                    <li>Portfolio yang relevan dengan Skema Sertifikasi Junior Mobile Programmer, bila ada</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Daftar Unit Kompetensi</div>
+                <ul>
+                    <li><span class="competency-code">J.612000.001.01</span> Menunjukkan Platform Operating System Dan
+                        Bahasa Pemrograman Di Dalam Perangkat Lunak</li>
+                    <li><span class="competency-code">J.612000.003.01</span> Merancang Database Dan Data Persistence
+                        Pada Mobile Data</li>
+                    <li><span class="competency-code">J.612000.006.01</span> Menunjukkan Mobile Location Based Service,
+                        GPS Dan Mobile Navigation</li>
+                    <li><span class="competency-code">J.612000.007.01</span> Menunjukkan Mobile Interface</li>
+                    <li><span class="competency-code">J.612000.020.02</span> Menjelaskan Dasar-Dasar Mobile
+                        Communication Security</li>
+                    <li><span class="competency-code">J.612000.022.01</span> Menunjukkan Mobile Sensor Dan Spesifikasi
+                        Teknisnya Untuk Mobile Application</li>
+                    <li><span class="competency-code">J.612000.025.01</span> Menentukan Mobile Seluler Network</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Metode Uji Kompetensi</div>
+                <div class="method-container">
+                    <div class="method-box">Metode Uji Kompetensi Langsung</div>
+                    <div class="method-box">Metode Uji Kompetensi Tak Langsung</div>
+                    <div class="method-box">Metode Uji Kompetensi Tambahan</div>
+                    <div class="method-box">Ceklist Observasi</div>
+                    <div class="method-box">Verifikasi Portofolio</div>
+                    <div class="method-box">• Daftar Pertanyaan Tertulis,
+                        dan/atau,<br>
+                        • Daftar Pertanyaan Lisan,
+                        dan/atau,<br>
+                        • Pertanyaan Wawancara</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer-distributed">
 
-        <div class="footer-map">
-            <div class="map-responsive">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d368.349598346712!2d106.79010131913942!3d-6.561388742766948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c416cbdea47b%3A0x9cc185c252b63a14!2sPT%20Bonet%20Utama%20(Internet%20Bogor)!5e1!3m2!1sid!2sid!4v1728368202127!5m2!1sid!2sid"
-                    width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer-left">
+            <div class="footer-map">
+                <div class="map-responsive">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d368.349598346712!2d106.79010131913942!3d-6.561388742766948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c416cbdea47b%3A0x9cc185c252b63a14!2sPT%20Bonet%20Utama%20(Internet%20Bogor)!5e1!3m2!1sid!2sid!4v1728368202127!5m2!1sid!2sid"
+                        width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
             </div>
-            
-        </div>
 
             <!-- Moving the company name to a new div -->
             <div class="footer-company-name-container">
@@ -195,7 +244,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
                     aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>

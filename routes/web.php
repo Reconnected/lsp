@@ -36,7 +36,10 @@ Route::get('/kontakkami', [PageController::class, 'kontakkami'])->name('Kontak-K
 Route::get('/skemainfo/office', [PageController::class, 'office'])->name('Junior-Office-Specialist');
 Route::get('/skemainfo/mobile', [PageController::class, 'mobile'])->name('Junior-Mobile-Programmer');
 Route::get('/skemainfo/web', [PageController::class, 'web'])->name('Junior-Web-Developer');
-
+Route::get('/skemainfo/designer', [PageController::class, 'designer'])->name('Junior-Graphic-Designer');
+Route::get('/skemainfo/motion', [PageController::class, 'motion'])->name('Motion-Graphic-Artist');
+Route::get('/skemainfo/administrator', [PageController::class, 'administrator'])->name('Junior-Network-Administrator');
+Route::get('/skemainfo/teknisi', [PageController::class, 'teknisi'])->name('Teknisi-Utama-Jaringan-Komputer');
 //proses
 
 // Define a POST route for storing the pesan

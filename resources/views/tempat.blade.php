@@ -63,7 +63,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +76,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}" class="active">Tempat Uji Kompetensi</a></li>
@@ -85,7 +85,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -125,7 +125,7 @@ window.addEventListener('load', function() {
             <div class="card-content">
                 <h3>Junior Office Specialist</h3>
                 <p>Jl. Meruya Ilir Raya, Komplek Taman Kebun Jeruk A II/1, Lantai 8, Jakarta Barat, 11650
-                    TUK Aktif (Validasi LSP Informatika Signal Teknindo)</p>
+                    TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
             </div>
         </div>
         <div class="card">
@@ -134,7 +134,7 @@ window.addEventListener('load', function() {
                 <h3>Junior Mobile Programmer</h3>
                 <p>Komplek Ruko Plaza Indah Bogor B-2
                     Jl. KH. Sholeh Iskandar - Kedungbadak, Kota Bogor, 16164
-                    TUK Aktif (Validasi LSP Informatika Signal Teknindo)</p>
+                    TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
             </div>
         </div>
         <div class="card">
@@ -142,7 +142,7 @@ window.addEventListener('load', function() {
             <div class="card-content">
                 <h3>Junior Web Developer</h3>
                 <p>JJl. Mega Mendung III Blok E2 No. 15, Kota Bogor, Jawa Barat
-                    TUK Aktif (Validasi LSP Informatika Signal Teknindo)</p>
+                    TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
             </div>
         </div>
     </div>
@@ -198,7 +198,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>         
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">

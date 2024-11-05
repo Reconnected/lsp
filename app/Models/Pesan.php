@@ -10,5 +10,5 @@ class Pesan extends Model
     use HasFactory;
 
     protected $table = 'pesan'; // Specify the table name if different
-    protected $fillable = ['nama', 'email', 'alamat', 'pesan']; // Mass assignable fields
+    protected $fillable = ['nama', 'email', 'alamat', 'no_telepon', 'pesan']; // Mass assignable
 }

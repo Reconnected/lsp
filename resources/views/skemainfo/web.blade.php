@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset ('../gambar/lsp.png') }}">
+    <link rel="icon" href="{{ asset('../gambar/lsp.png') }}">
     <title>Lembaga Sertifikasi Profesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -25,10 +25,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -37,9 +39,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -63,7 +71,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -76,7 +84,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -85,7 +93,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -100,17 +108,17 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-});
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('load', function() {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }, 1500); // Adjust this value to control how long the loading screen shows
@@ -118,33 +126,76 @@ window.addEventListener('load', function() {
     </script>
     </script>
 
-<div class="container">
-    <!-- Bagian Gambar di atas -->
-    <div class="header">
-        <img src="{{ asset('../gambar/junior_web.jpg') }}" alt="Junior Web Developer">
-    </div>
+    <div class="container">
+        <!-- Bagian Gambar di atas -->
+        <div class="header">
+            <img src="{{ asset('../gambar/junior_web.jpg') }}" alt="Junior Web Developer">
+        </div>
 
-    <!-- Bagian Konten Informasi -->
-    <div class="content">
-        <h1>Junior Web Developer</h1>
-        <p>
-            Junior Web Developer adalah posisi yang sangat penting dalam tim pengembangan perangkat lunak. 
-            Mereka bertanggung jawab untuk merancang, mengembangkan, dan memelihara situs web yang responsif 
-            dan menarik untuk meningkatkan pengalaman pengguna.
-        </p>
-        <p>
-            Sebagai seorang Junior Web Developer, keterampilan yang dibutuhkan mencakup pemahaman yang baik 
-            tentang bahasa pemrograman seperti HTML, CSS, dan JavaScript. Selain itu, pengalaman dengan 
-            framework seperti React, Angular, atau Vue.js sangat diinginkan untuk mendukung pengembangan aplikasi 
-            web modern.
-        </p>
-        <p>
-            Junior Web Developer juga perlu memiliki kemampuan dalam debugging, pengujian, dan pemecahan masalah. 
-            Kemampuan untuk bekerja dalam tim dan berkolaborasi dengan desainer serta pengembang lain sangat penting 
-            untuk menciptakan situs web yang efisien dan memenuhi kebutuhan klien.
-        </p>
+        <!-- Bagian Konten Informasi -->
+        <div class="content">
+            <h1>JUNIOR WEB DEVELOPER</h1>
+
+            <div class="section">
+                <div class="section-title">Deskripsi</div>
+                <p>Seorang Mobile Application Developer bertanggung jawab atas berbagai aspek
+                    pengembangan aplikasi mobile. Mereka harus mampu mengimplementasikan antarmuka
+                    pengguna (user interface) yang intuitif dan responsif, serta menerapkan perintah eksekusi
+                    dalam bahasa pemrograman berbasis teks, grafik, dan multimedia. Selain itu, mereka perlu
+                    menyusun fungsi, file, atau sumber daya pemrograman lainnya dalam organisasi yang rapi
+                    untuk memastikan kode yang mudah dikelola dan dipelihara.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Persyaratan Dasar Pemohon Sertifikasi</div>
+                <ul class="requirements">
+                    <li>Pas foto 3x4 (3 lembar).</li>
+                    <li>Copy identitas diri KTP/KK (1 lembar).</li>
+                    <li>Copy ijazah terakhir / Surat Keterangan Lulus (1 lembar).</li>
+                    <li>Copy sertifikat yang relevan dengan Skema Sertifikasi Junior Web Developer, bila ada</li>
+                    <li>CV pengalaman / keterangan kerja yang relevan dengan Skema Sertifikasi Junior Web
+                        Developer, bila ada.
+                    </li>
+                    <li>Portofolio yang relevan dengan Skema Sertifikasi Junior Web Developer, bila ada</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Daftar Unit Kompetensi</div>
+                <ul>
+                    <li><span class="competency-code">J.620100.005.01</span> Mengimplementasikan user interface</li>
+                    <li><span class="competency-code">J.620100.010.02</span> Menerapkan perintah eksekusi bahasa
+                        pemrograman berbasis
+                        teks, grafik, dan multimedia</li>
+                    <li><span class="competency-code">J.620100.015.01</span> Menyusun fungsi, file atau sumber daya
+                        pemrograman yang lain
+                        dalam organisasi yang rapi</li>
+                    <li><span class="competency-code">J.620100.016.01</span> Menulis kode dengan prinsip sesuai
+                        guidelines dan best practices</li>
+                    <li><span class="competency-code">.620100.017.02</span> Mengimplementasikan pemrograman terstruktur
+                    </li>
+                    <li><span class="competency-code">J.620100.019.02</span> Menggunakan library atau komponen
+                        pre-existing</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Metode Uji Kompetensi</div>
+                <div class="method-container">
+                    <div class="method-box">Metode Uji Kompetensi Langsung</div>
+                    <div class="method-box">Metode Uji Kompetensi Tak Langsung</div>
+                    <div class="method-box">Metode Uji Kompetensi Tambahan</div>
+                    <div class="method-box">Ceklist Observasi</div>
+                    <div class="method-box">Verifikasi Portofolio</div>
+                    <div class="method-box">• Daftar Pertanyaan Tertulis,
+                        dan/atau,<br>
+                        • Daftar Pertanyaan Lisan,
+                        dan/atau,<br>
+                        • Pertanyaan Wawancara</div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
 
     <footer class="footer-distributed">
@@ -157,7 +208,7 @@ window.addEventListener('load', function() {
                         width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                
+
             </div>
 
             <!-- Moving the company name to a new div -->
@@ -198,7 +249,7 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
                     aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>

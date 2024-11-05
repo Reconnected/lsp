@@ -118,48 +118,84 @@ nav a.active:hover {
 
 
 /* Dropdown Styles */
+/* Gaya untuk dropdown */
+/* Dropdown Styles yang sudah diperbaiki */
+/* Dropdown Styles yang sudah diperbaiki */
 .dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  list-style: none;
-  padding: 0;
-  min-width: 150px;
+  left: 50%;  /* Posisi dari tengah parent */
+  transform: translateX(-50%); /* Geser kembali setengah lebar dropdown */
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   border-radius: 8px;
+  padding: 8px 0;
+  margin-top: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
-.dropdown-menu li {
-  padding: 10px;
-}
-
-.dropdown-menu li a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #f2f2f2;
+/* Panah kecil di atas dropdown */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;  /* Posisi dari tengah */
+  transform: translateX(-50%) rotate(45deg); /* Geser ke tengah dan rotasi */
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
-.dropdown-toggle::after {
-  content: " ▼";
-  font-size: 0.8rem;
-  margin-left: 5px;
+/* Menu Items Style */
+.dropdown-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+.dropdown-menu a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Mencegah text wrap */
+}
+
+.dropdown-menu a:hover {
+  background: #f8f9fa;
+  color: #858df8;
+}
+
+/* Garis pemisah antar menu items */
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Active state */
+.dropdown-menu a.active {
+  background: #858df8;
+  color: white;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -192,17 +228,34 @@ nav a.active:hover {
 
   .dropdown-menu {
       position: static;
-      /* Ensure dropdown stays within layout */
+      transform: none;
       box-shadow: none;
       width: 100%;
-      /* Full width dropdown for mobile */
+      margin-top: 5px;
+      border: 1px solid #eee;
   }
 
-  .dropdown-menu li a {
-      width: 100%;
-      /* Full width dropdown items */
+  .dropdown-menu::before {
+      display: none;
+  }
+  
+  .dropdown-menu a {
+      padding: 10px 15px;
   }
 }
+/* Optional: Jika masih ada masalah dengan posisi di sisi kanan layar */
+.dropdown:last-child .dropdown-menu {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.dropdown:last-child .dropdown-menu::before {
+  left: auto;
+  right: 20px;
+  transform: rotate(45deg);
+}
+
 
 @media (max-width: 480px) {
   .logo img {
@@ -252,111 +305,128 @@ nav a.active:hover {
   }
 }
 
-.profile {
-  padding: 50px 10px;
-  background-color: #f9f9f9;
-}
-
-.profile-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  max-width: 900px;
+.informasi {
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-image {
-  text-align: left;
-  margin-bottom: 40px;
-  margin-left: -30px;
+.informasi img {
+  width: 100%; /* Gambar mengisi lebar kontainer */
+  height: auto; /* Menjaga proporsi gambar */
+  max-height: 500px; /* Membatasi tinggi maksimum */
+  object-fit: cover; /* Menyesuaikan isi gambar */
+  border-radius: 8px; /* Menambahkan border radius */
 }
 
-.profile-image img {
-  max-width: 100%;
-  height: auto;
+.header img {
+  width: 100%; /* Memastikan gambar mengisi lebar kontainer */
+  height: auto; /* Memastikan proporsi gambar tetap */
+  max-height: 500px; /* Atur tinggi maksimum gambar */
+  object-fit: cover; /* Mengatur cara gambar diisi */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: -30px;
 }
 
-.informasi-content {
-  text-align: left;
-  margin-left: -30px;
-  padding-left: 0;
+.content {
+  padding: 20px 0;
 }
 
-.informasi-content h2 {
-  font-size: 28px;
+.content h1 {
+  text-align: center;
   color: #333;
-  text-align: left;
-  margin-bottom: 20px;
-  margin-left: -30px;
-  padding-left: 0;
 }
 
-.informasi-content p {
-  font-size: 16px;
+.content p {
+  text-align: justify;
   line-height: 1.6;
-  color: #666;
-  margin-bottom: 20px;
-  margin-left: -30px;
-  padding-left: 0;
+  color: #555;
 }
 
-.informasi-content p strong {
+.section {
+  margin: 20px 0;
+}
+
+.section-title {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.publication-details {
-  margin-left: -30px;
-  color: #999;
-  font-size: 14px;
-  margin-top: 20px;
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-/* Base styles remain as is */
+li {
+  margin-bottom: 8px;
+}
 
+.competency-code {
+  color: #666;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.method-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Optional: adds space between boxes */
+}
+
+.method-box {
+  background-color: #4682B4;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 10px); /* Adjusts each box to take up to 3 per row */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.requirements li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.requirements li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+/* Media query untuk responsif */
 @media (max-width: 768px) {
-  /* Adjust layout for medium screens */
-  .profile-content {
-      max-width: 100%;
-      flex-direction: column; /* Stack elements */
+  .header img {
+      max-height: 300px; /* Tinggi maksimum untuk layar kecil */
+  }
+  .informasi img {
+    max-height: 300px; /* Menyesuaikan tinggi maksimum untuk layar kecil */
+  }
+
+  .content h1 {
+      font-size: 1.5em; /* Ukuran font judul untuk layar kecil */
+  }
+
+  .content p {
+      font-size: 1em; /* Ukuran font paragraf untuk layar kecil */
   }
 }
 
 @media (max-width: 375px) {
-  .profile {
-      padding: 15px 5px; /* Reduce padding for smaller screens */
+  .informasi {
+    padding: 15px 5px; /* Mengurangi padding pada layar kecil */
   }
 
-  .profile-content {
-      max-width: 100%; /* Full width on mobile */
-      flex-direction: column; /* Ensure elements are stacked */
-  }
-
-  .profile-image, 
-  .informasi-content, 
-  .publication-details {
-      margin-left: 0; /* Remove negative margin */
-  }
-
-  .profile-image img {
-      max-width: 100%; /* Image fills container width */
-  }
-
-  .informasi-content h2 {
-      font-size: 20px; /* Reduce heading size */
-  }
-
-  .informasi-content p {
-      font-size: 14px; /* Adjust text size for readability */
-  }
-
-  .publication-details {
-      font-size: 12px; /* Smaller font for details */
+  .informasi img {
+    max-height: 250px; /* Lebih kecil lagi untuk layar sangat kecil */
   }
 }
+
 
 
 

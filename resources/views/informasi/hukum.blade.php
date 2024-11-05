@@ -70,7 +70,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -83,7 +83,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -92,7 +92,7 @@
 
             <a href="{{ route('Kerja-Sama') }}">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -125,40 +125,33 @@
         });
     </script>
 
-    <section class="profile">
-        <div class="profile-content">
-            <div class="informasi-content">
-                <h2>Dasar Hukum BNSP dan LSP</h2>
-            </div>
-            <div class="profile-image">
-                <img src="{{ asset('gambar/hukum.jpg') }}" alt="Profile Picture">
-            </div>
-            <div class="informasi-content">
-                <p>Dasar Hukum Pendirian BNSP dan LSP :</p>
-                <p>1. Undang-Undang No. 13 Tahun 2003 tentang Ketenagakerjaan, pasal 18.</p>
-                <p>2. Undang-Undang No. 20 Tahun 2003 tentang Sistem Pendidikan Nasional, pasal 61.</p>
-                <p>3. Undang-Undang No. 5 Tahun 1984 tentang Perindustrian (Lembaran Negara tahun 1984 No. 22, Tambahan
-                    Lembaran Negara Nomor 3274).</p>
-                <p>4. Peraturan Pemerintah No. 52 Tahun 2012 tentang Sertifikasi Kompetensi dan Sertifikasi Usaha di
-                    bidang Pariwisata.</p>
-                <p>5. Peraturan Pemerintah No. 31 Tahun 2006 tentang Sistem Latihan Kerja Nasional.</p>
-                <p>6. Peraturan Pemerintah No. 23 Tahun 2004 tentang Badan Nasional Sertifikasi Profesi (BNSP).</p>
-                <p>7. PerMenakertrans No. PER.22/MEN/IX/2009 tentang Penyelenggaraan Pemagangan Dalam Negeri.</p>
-                <p>8. PerMenakertrans No. PER. 21/MEN/X/2007 tentang Tata Cara Penetapan Standar Kompetensi Kerja
-                    Nasional Indonesia.</p>
-                <p>9. PerMenakertrans No. PER-17/MEN/VI/2007 tentang Tatacara Perizinan dan Pendaftaran Lembaga
-                    Pelatihan Kerja.</p>
-                <p>10. Surat Keputusan Menteri Tenaga Kerja dan Transmigrasi Republik Indonesia No. KEP-96A/MEN/VI/2004
-                    tentang Pedoman Penyiapan dan Akreditasi Lembaga Sertifikasi Profesi.</p>
-                <p><strong>Sumber: BNSP</strong></p>
-            </div>
+<section class="informasi">
+    <div class="header">
+        <img src="{{ asset('gambar/hukum.jpg') }}" alt="Profile Picture">
+    </div>
+    <div class="content">
+        <h1>Dasar Hukum BNSP dan LSP</h1>
+        <p>Dasar Hukum Pendirian BNSP dan LSP:</p>
+        <ul class="requirements">
+            <li>1. Undang-Undang No. 13 Tahun 2003 tentang Ketenagakerjaan, pasal 18.</li>
+            <li>2. Undang-Undang No. 20 Tahun 2003 tentang Sistem Pendidikan Nasional, pasal 61.</li>
+            <li>3. Undang-Undang No. 5 Tahun 1984 tentang Perindustrian (Lembaran Negara tahun 1984 No. 22, Tambahan Lembaran Negara Nomor 3274).</li>
+            <li>4. Peraturan Pemerintah No. 52 Tahun 2012 tentang Sertifikasi Kompetensi dan Sertifikasi Usaha di bidang Pariwisata.</li>
+            <li>5. Peraturan Pemerintah No. 31 Tahun 2006 tentang Sistem Latihan Kerja Nasional.</li>
+            <li>6. Peraturan Pemerintah No. 23 Tahun 2004 tentang Badan Nasional Sertifikasi Profesi (BNSP).</li>
+            <li>7. PerMenakertrans No. PER.22/MEN/IX/2009 tentang Penyelenggaraan Pemagangan Dalam Negeri.</li>
+            <li>8. PerMenakertrans No. PER. 21/MEN/X/2007 tentang Tata Cara Penetapan Standar Kompetensi Kerja Nasional Indonesia.</li>
+            <li>9. PerMenakertrans No. PER-17/MEN/VI/2007 tentang Tatacara Perizinan dan Pendaftaran Lembaga Pelatihan Kerja.</li>
+            <li>10. Surat Keputusan Menteri Tenaga Kerja dan Transmigrasi Republik Indonesia No. KEP-96A/MEN/VI/2004 tentang Pedoman Penyiapan dan Akreditasi Lembaga Sertifikasi Profesi.</li>
+        </ul>
+        <p><strong>Sumber: BNSP</strong></p>
+    </div>
+    <div class="publication-details">
+        <p>Published on: <strong>04 October 2024</strong></p>
+        <p>Publisher: <strong>Rishqi</strong></p>
+    </div>
+</section>
 
-            <div class="publication-details">
-                <p>Published on: <strong>04 October 2024</strong></p>
-                <p>Publisher: <strong>Rishqi</strong></p>
-            </div>
-        </div>
-    </section>
 
 
     <footer class="footer-distributed">
@@ -212,7 +205,7 @@
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
                     aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>

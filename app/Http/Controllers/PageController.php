@@ -95,6 +95,25 @@ class PageController extends Controller
         return view('skemainfo.web'); // Mengarahkan ke view web.blade.php di folder skemainfo
     }
 
+    public function designer()
+    {
+        return view('skemainfo.designer'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
 
+    public function motion()
+    {
+        return view('skemainfo.motion'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
+
+    public function administrator()
+    {
+        return view('skemainfo.administrator'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
+
+    public function teknisi()
+    {
+        return view('skemainfo.teknisi'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
+    
 }
 

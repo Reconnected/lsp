@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset ('gambar/lsp.png') }}">
+    <link rel="icon" href="{{ asset('gambar/lsp.png') }}">
     <title>Lembaga Sertifikasi Profesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -24,10 +24,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -36,9 +38,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -62,7 +70,7 @@
 
             <!-- Tentang Kami Dropdown -->
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Tentang kami</a>
+                <a href="#" class="dropdown-toggle">Tentang kami ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('tentang.kami') }}">Profil</a></li>
                     <li><a href="{{ route('visi-misi') }}">Visi & Misi</a></li>
@@ -75,7 +83,7 @@
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -84,7 +92,7 @@
 
             <a href="{{ route('Kerja-Sama') }}" class="active">Kerjasama</a>
             <a href="{{ route('kontakkami') }}">Kontak kami</a>
-            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID -></a>
+            <a href="https://edukasi4.id/" class="edukasi-button">Edukasi 4 ID </a>
         </nav>
 
         <div class="date" id="currentDate"></div>
@@ -99,17 +107,17 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-});
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('load', function() {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }, 1500); // Adjust this value to control how long the loading screen shows
@@ -117,90 +125,140 @@ window.addEventListener('load', function() {
     </script>
 
 
-<section class="partnership">
-    <div class="partnership-header">
-        <h1>Kerjasama Dukungan Asosiasi dan Industri</h1>
-        <p>LSP Informatika Signal Teknindo didukung Asosiasi dan industri yang sesuai dengan skema yang diujikan.</p>
-    </div>
-    
-    <div class="partnership-carousel">
-        <div class="partnership-container">
-            <div class="partnership-item">
-                <img src="{{ asset('gambar/lsp.png') }}" alt="Bonet Logo" class="partner-logo">
-                <h2>PT Bonet Utama</h2>
+    <!-- First Carousel Section -->
+    <div class="section">
+        <div class="section-title">Dukungan LSP Signal Informatika Teknindo</div>
+        <div class="carousel-container">
+            <button class="nav-button prev" onclick="moveSlide(-1, 0)">←</button>
+            <button class="nav-button next" onclick="moveSlide(1, 0)">→</button>
+            <div class="carousel" id="carousel-1">
+                <div class="slide"><img src="{{ asset('gambar/indo.jpg') }}" alt="LSP 1"></div>
+                <div class="slide"><img src="{{ asset('gambar/Logo Kominfo.png') }}" alt="LSP 2"></div>
+                <div class="slide"><img src="{{ asset('gambar/LOGO PT BONET UTAMA.png') }}" alt="LSP 3"></div>
+                <div class="slide"><img src="{{ asset('gambar/Logo PT Edukasi Empat Indonesia.png') }}" alt="LSP 4"></div>
+                <div class="slide"><img src="{{ asset('gambar/Logo PT Putra Salim Teknologi.png') }}" alt="LSP 5"></div>
+                <div class="slide"><img src="{{ asset('gambar/Logo Relawan TIK.png') }}" alt="LSP 4"></div>
+                <div class="slide"><img src="{{ asset('gambar/PT Zeo Teknologi Nusantara.png') }}" alt="LSP 4"></div>
             </div>
-            <div class="partnership-item">
-                <img src="{{ asset('gambar/lsp.png') }}" alt="Teknologi Maju Logo" class="partner-logo">
-                <h2>PT Teknologi Maju</h2>
-            </div>
-            <div class="partnership-item">
-                <img src="{{ asset('gambar/lsp.png') }}" alt="ADI Logo" class="partner-logo">
-                <h2>Asosiasi Digital Indonesia</h2>
-            </div>
-            <div class="partnership-item">
-                <img src="{{ asset('gambar/lsp.png') }}" alt="GTS Logo" class="partner-logo">
-                <h2>Global Tech Solutions</h2>
-            </div>
-            <div class="partnership-item">
-                <img src="{{ asset('gambar/lsp.png') }}" alt="CSA Logo" class="partner-logo">
-                <h2>Cyber Security Alliance</h2>
-            </div>
-            <!-- Add more items as needed -->
+            <div class="indicators" id="indicators-1"></div>
         </div>
     </div>
-    <div class="scroll-indicator">Geser ke kanan atau kiri untuk melihat lebih banyak mitra</div>
-</section>
 
-<script>
-    const carousel = document.querySelector('.partnership-carousel');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    <!-- Second Carousel Section -->
+    <div class="section">
+        <div class="section-title">Our Valued Partner</div>
+        <div class="carousel-container">
+            <button class="nav-button prev" onclick="moveSlide(-1, 1)">←</button>
+            <button class="nav-button next" onclick="moveSlide(1, 1)">→</button>
+            <div class="carousel" id="carousel-2">
+                <div class="slide"><img src="{{ asset('gambar/Budi Mulia Telukjambe.png') }}" alt="Partner 1"></div>
+                <div class="slide"><img src="{{ asset('gambar/Logo SMK raflesia Depok.png') }}" alt="Partner 2"></div>
+                <div class="slide"><img src="{{ asset('gambar/Logo smkn 4 padalarang.jpg') }}" alt="Partner 3"></div>
+                <div class="slide"><img src="{{ asset('gambar/SMK insan medika.png') }}" alt="Partner 4"></div>
+                <div class="slide"><img src="{{ asset('gambar/SMK IT Cyber Orenz.jpg') }}" alt="Partner 5"></div>
+                <div class="slide"><img src="{{ asset('gambar/SMK_intelektual.png') }}" alt="Partner 5"></div>
+            </div>
+            <div class="indicators" id="indicators-2"></div>
+        </div>
+    </div>
 
-    carousel.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-        carousel.style.cursor = 'grabbing';
-    });
+    <script>
+        class Carousel {
+            constructor(id, autoplayInterval = 3000) {
+                this.carousel = document.getElementById(`carousel-${id}`);
+                this.slides = this.carousel.querySelectorAll('.slide');
+                this.indicatorsContainer = document.getElementById(`indicators-${id}`);
+                this.currentIndex = 0;
+                this.slideWidth = this.slides[0].offsetWidth + 20; // Including gap
+                this.autoplayInterval = autoplayInterval;
+                this.autoplayTimer = null;
 
-    carousel.addEventListener('mouseleave', () => {
-        isDown = false;
-        carousel.style.cursor = 'grab';
-    });
+                // Create indicators
+                this.slides.forEach((_, index) => {
+                    const indicator = document.createElement('div');
+                    indicator.classList.add('indicator');
+                    if (index === 0) indicator.classList.add('active');
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                    this.indicatorsContainer.appendChild(indicator);
+                });
 
-    carousel.addEventListener('mouseup', () => {
-        isDown = false;
-        carousel.style.cursor = 'grab';
-    });
+                this.indicators = this.indicatorsContainer.querySelectorAll('.indicator');
+                
+                // Clone slides for infinite effect
+                const clonedSlides = [...this.slides].map(slide => slide.cloneNode(true));
+                clonedSlides.forEach(slide => this.carousel.appendChild(slide));
 
-    carousel.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX);
-        carousel.scrollLeft = scrollLeft - walk;
-    });
+                // Start autoplay
+                this.startAutoplay();
 
-    // Touch events for mobile
-    carousel.addEventListener('touchstart', (e) => {
-        isDown = true;
-        startX = e.touches[0].pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-    });
+                // Pause on hover
+                this.carousel.addEventListener('mouseenter', () => this.stopAutoplay());
+                this.carousel.addEventListener('mouseleave', () => this.startAutoplay());
+            }
 
-    carousel.addEventListener('touchend', () => {
-        isDown = false;
-    });
+            updateIndicators() {
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+            }
 
-    carousel.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX - carousel.offsetLeft;
-        const walk = (x - startX);
-        carousel.scrollLeft = scrollLeft - walk;
-    });
-</script>
-    
+            moveSlide(direction) {
+                this.currentIndex += direction;
+                
+                if (this.currentIndex >= this.slides.length) {
+                    this.currentIndex = 0;
+                    this.carousel.style.transition = 'none';
+                    this.updateTransform();
+                    setTimeout(() => {
+                        this.carousel.style.transition = 'transform 0.5s ease';
+                    }, 10);
+                } else if (this.currentIndex < 0) {
+                    this.currentIndex = this.slides.length - 1;
+                    this.carousel.style.transition = 'none';
+                    this.updateTransform();
+                    setTimeout(() => {
+                        this.carousel.style.transition = 'transform 0.5s ease';
+                    }, 10);
+                } else {
+                    this.updateTransform();
+                }
+
+                this.updateIndicators();
+            }
+
+            updateTransform() {
+                this.carousel.style.transform = `translateX(-${this.currentIndex * this.slideWidth}px)`;
+            }
+
+            goToSlide(index) {
+                this.currentIndex = index;
+                this.updateTransform();
+                this.updateIndicators();
+            }
+
+            startAutoplay() {
+                this.autoplayTimer = setInterval(() => this.moveSlide(1), this.autoplayInterval);
+            }
+
+            stopAutoplay() {
+                clearInterval(this.autoplayTimer);
+            }
+        }
+
+        // Initialize carousels
+        const carousel1 = new Carousel(1);
+        const carousel2 = new Carousel(2);
+
+        // Global function for nav buttons
+        function moveSlide(direction, carouselId) {
+            if (carouselId === 0) {
+                carousel1.moveSlide(direction);
+            } else {
+                carousel2.moveSlide(direction);
+            }
+        }
+    </script>
+
 
     <footer class="footer-distributed">
 
@@ -212,7 +270,7 @@ window.addEventListener('load', function() {
                         width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                
+
             </div>
 
             <!-- Moving the company name to a new div -->
@@ -228,7 +286,8 @@ window.addEventListener('load', function() {
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>Komplek Ruko Plaza Indah Bogor B-2 Jl. KH.</span> Sholeh Iskandar - Kedungbadak, Kota Bogor.</p>
+                <p><span>Komplek Ruko Plaza Indah Bogor B-2 Jl. KH.</span> Sholeh Iskandar - Kedungbadak, Kota Bogor.
+                </p>
             </div>
 
             <div>
@@ -252,9 +311,10 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6282117239935?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                    aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                </a>         
+                </a>
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
