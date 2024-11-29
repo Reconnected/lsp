@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1,
+.logo-text h2 {
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 30px;
+
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 10px 7px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #858df8;
+    color: white;
+}
+
+/* New styles for active state */
+nav a.active {
+    background-color: #858df8;
+    color: white;
+}
+
+/* Ensure hover effect doesn't override active state */
+nav a.active:hover {
+    background-color: #6369d1;
+    /* Slightly darker shade for hover effect on active item */
+}
+
+/* Update dropdown styles to maintain active state */
+.dropdown-menu li a.active {
+    background-color: #858df8;
+    color: white;
+}
+
+.dropdown-menu li a.active:hover {
+    background-color: #6369d1;
+}
+
+/* Responsive styles update */
+@media (max-width: 768px) {
+
+    nav a.active,
+    .dropdown-menu li a.active {
+        background-color: #858df8;
+        color: white;
+    }
+}
+
+/* Warna dasar kuning untuk tombol */
+.edukasi-button {
+    background-color: #FFD700;
+    /* Warna kuning */
+    color: #000;
+    /* Warna teks hitam */
+    padding: 10px 20px;
+    /* Spasi di dalam tombol */
+    border-radius: 5px;
+    /* Membuat sudut tombol melengkung */
+    text-decoration: none;
+    /* Menghapus garis bawah */
+    font-weight: bold;
+    /* Membuat teks tebal */
+    transition: background-color 0.3s ease;
+    /* Efek transisi saat hover */
+}
+
+/* Efek hover lebih gelap */
+.edukasi-button:hover {
+    background-color: #DAA520;
+    /* Warna kuning gelap saat hover */
+    color: #fff;
+    /* Teks menjadi putih saat hover */
+}
+
+
+/* Dropdown Styles */
+/* Gaya untuk dropdown */
+/* Dropdown Styles yang sudah diperbaiki */
+/* Dropdown Styles yang sudah diperbaiki */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 50%;
+    /* Posisi dari tengah parent */
+    transform: translateX(-50%);
+    /* Geser kembali setengah lebar dropdown */
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Panah kecil di atas dropdown */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    /* Posisi dari tengah */
+    transform: translateX(-50%) rotate(45deg);
+    /* Geser ke tengah dan rotasi */
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Menu Items Style */
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    /* Mencegah text wrap */
+}
+
+.dropdown-menu a:hover {
+    background: #f8f9fa;
+    color: #858df8;
+}
+
+/* Garis pemisah antar menu items */
+.dropdown-menu li:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Active state */
+.dropdown-menu a.active {
+    background: #858df8;
+    color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+        width: 100%;
+        /* Ensure links take up full width on smaller screens */
+        box-sizing: border-box;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        width: 100%;
+        margin-top: 5px;
+        border: 1px solid #eee;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 15px;
+    }
+}
+
+/* Optional: Jika masih ada masalah dengan posisi di sisi kanan layar */
+.dropdown:last-child .dropdown-menu {
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+.dropdown:last-child .dropdown-menu::before {
+    left: auto;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .logo-text h1,
+    .logo-text h2 {
+        font-size: 12px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        min-width: 100px;
+    }
+}
+
+/* Mobile Navigation Toggle (Optional) */
+.mobile-nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        /* Hide nav by default */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+        /* Show nav when active */
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #404be9;
+    color: #fff;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the download button */
+.btn-download {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #404be9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: normal; /* Prevent bold text */
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+    background-color: #303cc1;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.btn-download:active {
+    background-color: #202a91;
+    transform: scale(0.95); /* Pressed effect */
+}
+
+/** footer **/
+.footer-distributed {
+    background: #4c5270;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: rgb(69, 29, 211);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #6163da;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: rgb(20, 146, 219);
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #6163da;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.map-responsive {
+    position: relative;
+    padding-bottom: 35.55%;
+    /* Aspect ratio for 450x160 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+
+}

@@ -81,6 +81,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
+                    <li><a href="{{ route('File-Download') }}">Download</a></li>
                 </ul>
             </div>
 
@@ -131,7 +132,7 @@ window.addEventListener('load', function() {
                     Kedungbadak, Kec. Tanah Sereal, Kota Bogor, Jawa Barat 16164</p>
                 <p><i class="fas fa-phone-alt"></i> +62 858-8556-4596</p>
                 <p><i class="fas fa-envelope"></i> admin@lspsignal.id</p>
-                <a href="https://wa.me/6282117239935?text=Halo,%20saya%20ingin%20bertanya%20tentang%20program%20LSP%20Informatika%20Signal%20Teknindo"
+                <a href="https://wa.me/6285885564596?text=Halo,%20saya%20ingin%20bertanya%20tentang%20program%20LSP%20Informatika%20Signal%20Teknindo"
                     class="whatsapp-link"><i class="fab fa-whatsapp"></i> Hubungi via WhatsApp</a>
                 <button class="pesan-button" onclick="openPopup()">Pesan</button> <!-- New button -->
             </div>

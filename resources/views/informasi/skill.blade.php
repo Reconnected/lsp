@@ -80,6 +80,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
+                    <li><a href="{{ route('File-Download') }}">Download</a></li>
                 </ul>
             </div>
 

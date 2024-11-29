@@ -40,6 +40,8 @@ Route::get('/skemainfo/designer', [PageController::class, 'designer'])->name('Ju
 Route::get('/skemainfo/motion', [PageController::class, 'motion'])->name('Motion-Graphic-Artist');
 Route::get('/skemainfo/administrator', [PageController::class, 'administrator'])->name('Junior-Network-Administrator');
 Route::get('/skemainfo/teknisi', [PageController::class, 'teknisi'])->name('Teknisi-Utama-Jaringan-Komputer');
+Route::get('/download', [PageController::class, 'download'])->name('File-Download');
+
 //proses
 
 // Define a POST route for storing the pesan

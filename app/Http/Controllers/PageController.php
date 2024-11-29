@@ -115,5 +115,10 @@ class PageController extends Controller
         return view('skemainfo.teknisi'); // Mengarahkan ke view web.blade.php di folder skemainfo
     }
     
+    public function download()
+    {
+        return view('download'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
+    
 }
 

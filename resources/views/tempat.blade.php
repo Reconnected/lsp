@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset ('gambar/lsp.png') }}">
+    <link rel="icon" href="{{ asset('gambar/lsp.png') }}">
     <title>Lembaga Sertifikasi Profesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -25,10 +25,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -37,9 +39,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -80,6 +88,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}" class="active">Tempat Uji Kompetensi</a></li>
+                    <li><a href="{{ route('File-Download') }}">Download</a></li>
                 </ul>
             </div>
 
@@ -100,17 +109,17 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-});
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('load', function() {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }, 1500); // Adjust this value to control how long the loading screen shows
@@ -123,7 +132,8 @@ window.addEventListener('load', function() {
         <div class="card">
             <img src="{{ asset('gambar/fab_lab.jpeg') }}" alt="Junior Office Specialist">
             <div class="card-content">
-                <h3>Junior Office Specialist</h3>
+                <h3>FabLab Trisakti
+                </h3>
                 <p>Jl. Meruya Ilir Raya, Komplek Taman Kebun Jeruk A II/1, Lantai 8, Jakarta Barat, 11650
                     TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
             </div>
@@ -131,7 +141,8 @@ window.addEventListener('load', function() {
         <div class="card">
             <img src="{{ asset('gambar/cloud9.jpeg') }}" alt="Junior Mobile Programmer">
             <div class="card-content">
-                <h3>Junior Mobile Programmer</h3>
+                <h3>Cloud9
+                </h3>
                 <p>Komplek Ruko Plaza Indah Bogor B-2
                     Jl. KH. Sholeh Iskandar - Kedungbadak, Kota Bogor, 16164
                     TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
@@ -140,9 +151,17 @@ window.addEventListener('load', function() {
         <div class="card">
             <img src="{{ asset('gambar/mega.jpg') }}" alt="Junior Web Developer">
             <div class="card-content">
-                <h3>Junior Web Developer</h3>
+                <h3>Signal</h3>
                 <p>JJl. Mega Mendung III Blok E2 No. 15, Kota Bogor, Jawa Barat
                     TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ asset('gambar/Kursus.jpg') }}" alt="Junior Web Developer">
+            <div class="card-content">
+                <h3>RKSchool</h3>
+                <p>Jl. Margonda Raya No.404, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424 (Validasi LSP
+                    Signal Informatika Teknindo)</p>
             </div>
         </div>
     </div>
@@ -158,7 +177,7 @@ window.addEventListener('load', function() {
                         width="450" height="160" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                
+
             </div>
 
             <!-- Moving the company name to a new div -->
@@ -174,7 +193,8 @@ window.addEventListener('load', function() {
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>Komplek Ruko Plaza Indah Bogor B-2 Jl. KH.</span> Sholeh Iskandar - Kedungbadak, Kota Bogor.</p>
+                <p><span>Komplek Ruko Plaza Indah Bogor B-2 Jl. KH.</span> Sholeh Iskandar - Kedungbadak, Kota Bogor.
+                </p>
             </div>
 
             <div>
@@ -198,9 +218,10 @@ window.addEventListener('load', function() {
                 <a href="https://www.facebook.com/profile.php?id=61566548993121&locale=id_ID" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya." aria-label="WhatsApp" target="_blank">
+                <a href="https://wa.me/6285885564596?text=Halo%2C%20saya%20ingin%20mengirimkan%20file%20pendaftaran%20saya.%20Silakan%20tunggu%20sejenak%20saat%20saya%20menguploadnya."
+                    aria-label="WhatsApp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                </a>         
+                </a>
                 <a href="https://www.instagram.com/lsp.signal/" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
