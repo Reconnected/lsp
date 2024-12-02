@@ -133,9 +133,9 @@
     <div class="menu-container">
         <!-- Menu Kategori -->
         <div class="menu-list">
-            <a href="{{ route('File-Download') }}" class="active">Leaflet</a>
+            <a href="{{ route('File-Download') }}" >Leaflet</a>
             <a href="{{ route('Alur-Proses') }}">Alur Proses Sertifikasi</a>
-            <a href="{{ route('Panduan') }}">Panduan Uji Kompetensi</a>
+            <a href="{{ route('Panduan') }}"class="active">Panduan Uji Kompetensi</a>
         </div>
 
         <!-- Submenu dan Pencarian -->
@@ -149,13 +149,72 @@
             <div class="submenu">
                 <div class="submenu-item" onclick="toggleDownloadCard(this)">
                     <span class="submenu-title">
-                        Leaflet <span class="arrow">&#9662;</span>
+                        Panduan Uji Kompetensi Skema JOO <span class="arrow">&#9662;</span>
                     </span>
                     <div class="download-card hidden">
-                        <!-- Perbaikan tombol download -->
-                        <a href="file/leaflet.pdf" download class="download-button">
-                            Download File
-                        </a>
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema JOO.pdf" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Panduan Uji Kompetensi Skema JMP <span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema JMP.pdf" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Panduan Uji Kompetensi Skema JWD<span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema JWD.pdf" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Panduan Uji Kompetensi Skema TUJK<span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema TUJK.pdf" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Panduan Uji Kompetensi Skema JNA<span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema JNA.pdf" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Panduan Uji Kompetensi Skema JGD<span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema JGD.pdf" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Panduan Uji Kompetensi Skema MGA<span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="../file/Panduan Uji Kompetensi Skema MGA.pdf" download>Download File</a>
+                        </button>
                     </div>
                 </div>
             </div>

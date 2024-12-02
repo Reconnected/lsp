@@ -126,71 +126,70 @@
         });
     </script>
 
-<div class="menu">
-    <!-- Judul -->
-    <h2>Daftar Dokumen</h2>
+    <div class="menu">
+        <!-- Judul -->
+        <h2>Daftar Dokumen</h2>
 
-    <div class="menu-container">
-        <!-- Menu Kategori -->
-        <div class="menu-list">
-            <a href="{{ route('File-Download') }}" class="active">Leaflet</a>
-            <a href="{{ route('Alur-Proses') }}">Alur Proses Sertifikasi</a>
-            <a href="{{ route('Panduan') }}">Panduan Uji Kompetensi</a>
-        </div>
-
-        <!-- Submenu dan Pencarian -->
-        <div class="submenu-container">
-            <!-- Pencarian -->
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Cari dokumen..." onkeyup="searchSubmenu()">
+        <div class="menu-container">
+            <!-- Menu Kategori -->
+            <div class="menu-list">
+                <a href="{{ route('File-Download') }}">Leaflet</a>
+                <a href="{{ route('Alur-Proses') }}"class="active">Alur Proses Sertifikasi</a>
+                <a href="{{ route('Panduan') }}">Panduan Uji Kompetensi</a>
             </div>
 
-            <!-- Submenu -->
-            <div class="submenu">
-                <div class="submenu-item" onclick="toggleDownloadCard(this)">
-                    <span class="submenu-title">
-                        Leaflet <span class="arrow">&#9662;</span>
-                    </span>
-                    <div class="download-card hidden">
-                        <!-- Perbaikan tombol download -->
-                        <a href="file/leaflet.pdf" download class="download-button">
-                            Download File
-                        </a>
+            <!-- Submenu dan Pencarian -->
+            <div class="submenu-container">
+                <!-- Pencarian -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cari dokumen..." onkeyup="searchSubmenu()">
+                </div>
+
+                <!-- Submenu -->
+                <div class="submenu">
+                    <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                        <span class="submenu-title">
+                            Alur Proses Sertifikasi<span class="arrow">&#9662;</span>
+                        </span>
+                        <div class="download-card hidden">
+                            <button class="download-button">
+                                <a href="../file/Alur Proses Sertifikasi.pdf" download>Download File</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Script -->
-<script>
-    function toggleDownloadCard(element) {
-        const downloadCard = element.querySelector('.download-card');
-        const arrow = element.querySelector('.arrow');
+    <!-- Script -->
+    <script>
+        function toggleDownloadCard(element) {
+            const downloadCard = element.querySelector('.download-card');
+            const arrow = element.querySelector('.arrow');
 
-        if (downloadCard.classList.contains('visible')) {
-            downloadCard.classList.remove('visible');
-            arrow.classList.remove('rotate');
-        } else {
-            downloadCard.classList.add('visible');
-            arrow.classList.add('rotate');
-        }
-    }
-
-    function searchSubmenu() {
-        const input = document.getElementById('searchInput').value.toLowerCase();
-        const items = document.querySelectorAll('.submenu-item');
-
-        items.forEach(item => {
-            if (item.textContent.toLowerCase().includes(input)) {
-                item.style.display = ''; // Tampilkan
+            if (downloadCard.classList.contains('visible')) {
+                downloadCard.classList.remove('visible');
+                arrow.classList.remove('rotate');
             } else {
-                item.style.display = 'none'; // Sembunyikan
+                downloadCard.classList.add('visible');
+                arrow.classList.add('rotate');
             }
-        });
-    }
-</script>
+        }
+
+        function searchSubmenu() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.querySelectorAll('.submenu-item');
+
+            items.forEach(item => {
+                if (item.textContent.toLowerCase().includes(input)) {
+                    item.style.display = ''; // Tampilkan
+                } else {
+                    item.style.display = 'none'; // Sembunyikan
+                }
+            });
+        }
+    </script>
 
 
     <footer class="footer-distributed">

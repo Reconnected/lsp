@@ -151,7 +151,7 @@
         <div class="card">
             <img src="{{ asset('gambar/mega.jpg') }}" alt="Junior Web Developer">
             <div class="card-content">
-                <h3>Signal</h3>
+                <h3>Signal Informatika</h3>
                 <p>JJl. Mega Mendung III Blok E2 No. 15, Kota Bogor, Jawa Barat
                     TUK Aktif (Validasi LSP Signal Informatika Teknindo)</p>
             </div>

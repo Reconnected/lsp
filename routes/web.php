@@ -41,6 +41,8 @@ Route::get('/skemainfo/motion', [PageController::class, 'motion'])->name('Motion
 Route::get('/skemainfo/administrator', [PageController::class, 'administrator'])->name('Junior-Network-Administrator');
 Route::get('/skemainfo/teknisi', [PageController::class, 'teknisi'])->name('Teknisi-Utama-Jaringan-Komputer');
 Route::get('/download', [PageController::class, 'download'])->name('File-Download');
+Route::get('/file/alur', [PageController::class, 'alur'])->name('Alur-Proses');
+Route::get('/file/panduan', [PageController::class, 'panduan'])->name('Panduan');
 
 //proses
 

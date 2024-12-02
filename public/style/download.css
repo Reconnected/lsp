@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f4f8;
     color: #333;
+    display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 
@@ -324,69 +329,139 @@ nav a.active:hover {
     }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.menu {
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+.menu-container {
+    display: flex;
 }
 
-thead {
-    background-color: #404be9;
-    color: #fff;
+.menu-list {
+    width: 200px;
+    border-right: 1px solid #ddd;
+    padding: 10px;
 }
 
-th, td {
-    text-align: center;
-    padding: 12px;
-    border: 1px solid #ddd;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Styling for the download button */
-.btn-download {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #404be9;
-    color: #fff;
+.menu-list a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
     text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-list a:hover {
+    background-color: #e4e4e4;
+}
+
+.menu-list a.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.submenu-container {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-weight: normal; /* Prevent bold text */
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.submenu-item:hover {
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submenu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
     font-size: 14px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.btn-download:hover {
-    background-color: #303cc1;
-    transform: scale(1.05); /* Slight zoom effect */
+.arrow.rotate {
+    transform: rotate(180deg);
 }
 
-.btn-download:active {
-    background-color: #202a91;
-    transform: scale(0.95); /* Pressed effect */
+.download-card {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    width: 90%;
+    transition: height 0.3s ease, opacity 0.3s ease;
 }
+
+.download-card.visible {
+    height: auto;
+    opacity: 1;
+}
+
+.download-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.download-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.download-button:hover {
+    background-color: #1b1f4a;
+}
+
 
 /** footer **/
 .footer-distributed {
@@ -397,6 +472,8 @@ tbody tr:hover {
     text-align: left;
     font: bold 16px sans-serif;
     padding: 55px 50px;
+    margin-top: auto;
+    /* Letakkan footer di bagian bawah jika halaman tidak cukup tinggi */
 }
 
 .footer-distributed .footer-left,

@@ -120,5 +120,14 @@ class PageController extends Controller
         return view('download'); // Mengarahkan ke view web.blade.php di folder skemainfo
     }
     
+    public function alur()
+    {
+        return view('file.alur'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
+
+    public function panduan()
+    {
+        return view('file.panduan'); // Mengarahkan ke view web.blade.php di folder skemainfo
+    }
 }
 
