@@ -143,11 +143,6 @@ window.addEventListener('load', function() {
                 <li>Perusahaan akan meningkatkan produktivitasnya jika mempekerjakan karyawan yang sudah berkompetensi di bidangnya, sehingga pekerjaan dapat diselesaikan dengan standar berkualitas.</li>
                 <li>Kesalahan kerja akan berkurang. Pekerja yang memiliki sertifikat profesi cenderung lebih profesional, sehingga kesalahan kerja akan lebih jarang terjadi.</li>
             </ol>
-    
-            <p>Untuk Anda yang masih fresh graduate, tidak masalah jika ingin mencari sertifikat ini. Anda bisa mengikuti sertifikasi BNSP secara online yang diselenggarakan oleh lembaga pelatihan secara virtual. Dengan memiliki sertifikasi kompetensi, perusahaan akan mempertimbangkan Anda walaupun masih fresh graduate.</p>
-    
-            <p>Jika Anda sedang bingung mencari sertifikasi kompetensi, Anda bisa mengunjungi <a href="https://sertifikasiku.com">sertifikasiku.com</a>, yang menyediakan berbagai produk sertifikasi kompetensi yang dapat membantu karir Anda.</p>
-    
             <p><strong>Sumber: BNSP</strong></p>
         </div>
     
