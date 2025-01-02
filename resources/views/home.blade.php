@@ -504,7 +504,7 @@
                             <h3>Sertifikasi Profesi di Mata Dunia</h3>
                             <div class="informasi-meta">
                                 <i class="far fa-calendar-alt"></i>
-                                <span>December 9, 2019</span>
+                                <span>November 8, 2024</span>
                             </div>
                         </div>
                     </div>
@@ -520,7 +520,7 @@
                             <h3>Badan Nasional Sertifikasi Profesi (BNSP)</h3>
                             <div class="informasi-meta">
                                 <i class="far fa-calendar-alt"></i>
-                                <span>April 2, 2018</span>
+                                <span>November 15, 2024</span>
                             </div>
                         </div>
                     </div>
@@ -536,7 +536,7 @@
                             <h3>Dasar Hukum BNSP dan LSP</h3>
                             <div class="informasi-meta">
                                 <i class="far fa-calendar-alt"></i>
-                                <span>April 2, 2018</span>
+                                <span>November 20, 2024</span>
                             </div>
                         </div>
                     </div>
@@ -552,7 +552,7 @@
                             <h3>Sertifikasi Kompetensi Penting untuk Kamu</h3>
                             <div class="informasi-meta">
                                 <i class="far fa-calendar-alt"></i>
-                                <span>April 2, 2018</span>
+                                <span>November 24, 2024</span>
                             </div>
                         </div>
                     </div>
