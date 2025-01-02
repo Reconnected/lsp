@@ -148,8 +148,7 @@
         <p><strong>Sumber: BNSP</strong></p>
     </div>
     <div class="publication-details">
-        <p>Published on: <strong>04 October 2024</strong></p>
-        <p>Publisher: <strong>Rishqi</strong></p>
+        <p>Published on: <strong>20 November 2024</strong></p>
     </div>
 </section>
 
