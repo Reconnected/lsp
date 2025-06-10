@@ -350,6 +350,7 @@ nav a.active:hover {
 }
 
 .slide {
+  max-width: calc(20% - 20px);
   min-width: calc(20% - 20px); /* Default: 5 kotak per tampilan */
   padding: 5px;
   background: white;

@@ -133,13 +133,16 @@
             <button class="nav-button prev" onclick="moveSlide(-1, 0)">←</button>
             <button class="nav-button next" onclick="moveSlide(1, 0)">→</button>
             <div class="carousel" id="carousel-1">
-                <div class="slide"><img src="{{ asset('gambar/indo.jpg') }}" alt="LSP 1"></div>
+                @foreach ($nonValuePartner as $partner)
+                    <div class="slide"><img src="{{ asset('storage/' . $partner->image) }}" alt="LSP {{ $partner->nama_perusahaan }}"></div>
+                @endforeach
+                <!-- <div class="slide"><img src="{{ asset('gambar/indo.jpg') }}" alt="LSP 1"></div>
                 <div class="slide"><img src="{{ asset('gambar/Logo Kominfo.png') }}" alt="LSP 2"></div>
                 <div class="slide"><img src="{{ asset('gambar/LOGO PT BONET UTAMA.png') }}" alt="LSP 3"></div>
                 <div class="slide"><img src="{{ asset('gambar/Logo PT Edukasi Empat Indonesia.png') }}" alt="LSP 4"></div>
                 <div class="slide"><img src="{{ asset('gambar/Logo PT Putra Salim Teknologi.png') }}" alt="LSP 5"></div>
                 <div class="slide"><img src="{{ asset('gambar/Logo Relawan TIK.png') }}" alt="LSP 4"></div>
-                <div class="slide"><img src="{{ asset('gambar/PT Zeo Teknologi Nusantara.png') }}" alt="LSP 4"></div>
+                <div class="slide"><img src="{{ asset('gambar/PT Zeo Teknologi Nusantara.png') }}" alt="LSP 4"></div> -->
             </div>
             <div class="indicators" id="indicators-1"></div>
         </div>
@@ -152,12 +155,15 @@
             <button class="nav-button prev" onclick="moveSlide(-1, 1)">←</button>
             <button class="nav-button next" onclick="moveSlide(1, 1)">→</button>
             <div class="carousel" id="carousel-2">
-                <div class="slide"><img src="{{ asset('gambar/Budi Mulia Telukjambe.png') }}" alt="Partner 1"></div>
+                @foreach($valuePartner as $partner)
+                    <div class="slide"><img src="{{ asset('storage/' . $partner->image) }}" alt="LSP {{ $partner->nama_perusahaan }}"></div>
+                @endforeach
+                <!-- <div class="slide"><img src="{{ asset('gambar/Budi Mulia Telukjambe.png') }}" alt="Partner 1"></div>
                 <div class="slide"><img src="{{ asset('gambar/Logo SMK raflesia Depok.png') }}" alt="Partner 2"></div>
                 <div class="slide"><img src="{{ asset('gambar/Logo smkn 4 padalarang.jpg') }}" alt="Partner 3"></div>
                 <div class="slide"><img src="{{ asset('gambar/SMK insan medika.png') }}" alt="Partner 4"></div>
                 <div class="slide"><img src="{{ asset('gambar/SMK IT Cyber Orenz.jpg') }}" alt="Partner 5"></div>
-                <div class="slide"><img src="{{ asset('gambar/SMK_intelektual.png') }}" alt="Partner 5"></div>
+                <div class="slide"><img src="{{ asset('gambar/SMK_intelektual.png') }}" alt="Partner 5"></div> -->
             </div>
             <div class="indicators" id="indicators-2"></div>
         </div>

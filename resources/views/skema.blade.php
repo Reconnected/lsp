@@ -130,7 +130,16 @@
     <h1>Skema Sertifikasi</h1>
 
     <div class="container" id="info-container">
+        @foreach($skemas as $skema)
         <div class="card">
+            <img src="{{ asset('storage/' . $skema->image) }}" alt="{{ $skema->nama_skema }}">
+            <h3>{{ $skema->nama_skema }}</h3>
+            <p>{{ $skema->deskripsi_singkat }}</p>
+            <a href="{{ route('skema.show', ['slug' => $skema->slug]) }}">Read More</a>
+        </div>
+        @endforeach
+
+        <!-- <div class="card">
             <img src="{{ asset('gambar/junior_mobile.jpeg') }}" alt="Junior Office Specialist">
             <h3>Junior Office Specialist</h3>
             <p>Junior Office Operator Merupakan sertifikasi berbasis Microsoft Office yang berdasarkan pada SKKNI dan
@@ -187,7 +196,7 @@
             <p>Teknisi Utama Jaringan Komputer adalah profesional yang bertanggung jawab untuk merancang, menginstal,
                 dan memelihara infrastruktur jaringan.</p>
             <a href="{{ route('Teknisi-Utama-Jaringan-Komputer') }}">Read More</a>
-        </div>
+        </div> -->
 
         <!-- Tambahkan lebih banyak elemen .card di sini sesuai kebutuhan -->
     </div>

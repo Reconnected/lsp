@@ -129,7 +129,16 @@
 
     <h1 style="text-align:center ;">Tempat Uji Kompetensi</h1>
     <div class="container">
-        <div class="card">
+        @foreach($tuks as $tuk)
+            <div class="card">
+                <img src="{{ asset('storage/' . $tuk->image) }}" alt="Gambar {{ $tuk->nama_tempat }}">
+                <div class="card-content">
+                    <h3>{{ $tuk->nama_tempat }}</h3>
+                    <p>{{ $tuk->alamat }}</p>
+                </div>
+            </div>
+        @endforeach
+        <!-- <div class="card">
             <img src="{{ asset('gambar/fab_lab.jpeg') }}" alt="Junior Office Specialist">
             <div class="card-content">
                 <h3>FabLab Trisakti
@@ -163,7 +172,7 @@
                 <p>Jl. Margonda Raya No.404, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424 (Validasi LSP
                     Signal Informatika Teknindo)</p>
             </div>
-        </div>
+        </div> -->
     </div>
 
 

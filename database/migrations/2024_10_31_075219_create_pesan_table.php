@@ -16,9 +16,9 @@ class CreatePesanTable extends Migration
         Schema::create('pesan', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('alamat');
-            $table->string('no_telepon');
+            $table->string('no_telepon')->unique();
             $table->text('pesan');
             $table->timestamps();
         });

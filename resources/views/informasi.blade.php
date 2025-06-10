@@ -72,11 +72,11 @@
                 </ul>
             </div>
 
-            <a href="{{ route('informasi') }}" class="active">Informasi ▼</a>
+            <a href="{{ route('informasi') }}" class="active">Informasi</a>
 
             <!-- Sertifikasi Dropdown -->
             <div class="dropdown">
-                <a href="#home" class="dropdown-toggle">Sertifikasi</a>
+                <a href="#home" class="dropdown-toggle">Sertifikasi ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('Skema-Sertifikasi') }}">Skema Sertifikasi</a></li>
                     <li><a href="{{ route('tempat-uji') }}">Tempat Uji Kompetensi</a></li>
@@ -125,8 +125,24 @@ window.addEventListener('load', function() {
                 <h1>Informasi</h1>
             </center>
             <div class="informasi-items">
+                @foreach($informations as $information)
+                <a href="{{ route('informasi.show', ['slug' => $information->slug]) }}" class="informasi-item-link">
+                    <div class="informasi-item">
+                        <div class="informasi-image">
+                            <img src="{{ asset('storage/' . $information->image) }}" alt="Informasi Image 1">
+                        </div>
+                        <div class="informasi-content">
+                            <h3>{{ $information->judul }}</h3>
+                            <div class="informasi-meta">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>{{ $information->tgl_publish->format('d M Y') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
                 <!-- Informasi Card 1 -->
-                <a href="{{ route('profesi') }}" class="informasi-item-link">
+                <!-- <a href="{{ route('profesi') }}" class="informasi-item-link">
                     <div class="informasi-item">
                         <div class="informasi-image">
                             <img src="{{ asset('gambar/profesi.jpg') }}" alt="Informasi Image 1">
@@ -139,10 +155,10 @@ window.addEventListener('load', function() {
                             </div>
                         </div>
                     </div>
-                </a>
+                </a> -->
 
                 <!-- Informasi Card 2 -->
-                <a href="{{ route('Badan-Nasional') }}" class="informasi-item-link">
+                <!-- <a href="{{ route('Badan-Nasional') }}" class="informasi-item-link">
                     <div class="informasi-item">
                         <div class="informasi-image">
                             <img src="{{ asset('gambar/sertifikasi.jpg') }}" alt="Informasi Image 2">
@@ -155,10 +171,10 @@ window.addEventListener('load', function() {
                             </div>
                         </div>
                     </div>
-                </a>
+                </a> -->
 
                 <!-- Informasi Card 3 -->
-                <a href="{{ route('Dasar-Hukum') }}" class="informasi-item-link">
+                <!-- <a href="{{ route('Dasar-Hukum') }}" class="informasi-item-link">
                     <div class="informasi-item">
                         <div class="informasi-image">
                             <img src="{{ asset('gambar/hukum.jpg') }}" alt="Informasi Image 3">
@@ -171,10 +187,10 @@ window.addEventListener('load', function() {
                             </div>
                         </div>
                     </div>
-                </a>
+                </a> -->
 
                 <!-- Informasi Card 4 -->
-                <a href="{{ route('Sertifikasi-Kompetensi') }}" class="informasi-item-link">
+                <!-- <a href="{{ route('Sertifikasi-Kompetensi') }}" class="informasi-item-link">
                     <div class="informasi-item">
                         <div class="informasi-image">
                             <img src="{{ asset('gambar/skil.jpg') }}" alt="Informasi Image 4">
@@ -187,7 +203,7 @@ window.addEventListener('load', function() {
                             </div>
                         </div>
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
     </section>

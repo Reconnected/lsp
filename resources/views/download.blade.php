@@ -147,17 +147,31 @@
 
             <!-- Submenu -->
             <div class="submenu">
+                @foreach($leaflets as $leaflet)
                 <div class="submenu-item" onclick="toggleDownloadCard(this)">
                     <span class="submenu-title">
-                        Leaflet <span class="arrow">&#9662;</span>
+                        {{ $leaflet->nama_file }} <span class="arrow">&#9662;</span>
                     </span>
                     <div class="download-card hidden">
                         <!-- Perbaikan tombol download -->
-                        <a href="file/leaflet.pdf" download class="download-button">
+                        <a href="{{ asset('storage/' . $leaflet->file) }}" download class="download-button">
                             Download File
                         </a>
                     </div>
                 </div>
+                @endforeach
+
+                <!-- <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        Leaflet <span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        Perbaikan tombol download
+                        <a href="file/leaflet.pdf" download class="download-button">
+                            Download File
+                        </a>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePesan extends Migration
+class CreateDownloadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreatePesan extends Migration
      */
     public function up()
     {
-        Schema::create('pesan', function (Blueprint $table) {
+        Schema::create('downloads', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('email')->unique();
-            $table->string('alamat');
-            $table->text('pesan');
+            $table->string('nama_file');
+            $table->string('kategori');
+            $table->string('file');
             $table->timestamps();
         });
     }
-    
-
 
     /**
      * Reverse the migrations.
@@ -32,6 +29,6 @@ class CreatePesan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pesan');
+        Schema::dropIfExists('downloads');
     }
 }

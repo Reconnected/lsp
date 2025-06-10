@@ -147,16 +147,18 @@
 
                 <!-- Submenu -->
                 <div class="submenu">
+                    @foreach($alurProses as $alur)
                     <div class="submenu-item" onclick="toggleDownloadCard(this)">
                         <span class="submenu-title">
-                            Alur Proses Sertifikasi<span class="arrow">&#9662;</span>
+                            {{ $alur->kategori }}<span class="arrow">&#9662;</span>
                         </span>
                         <div class="download-card hidden">
                             <button class="download-button">
-                                <a href="../file/Alur Proses Sertifikasi.pdf" download>Download File</a>
+                                <a href="{{ asset('storage/' . $alur->file)  }}" download>Download File</a>
                             </button>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

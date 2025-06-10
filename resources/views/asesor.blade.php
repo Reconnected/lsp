@@ -124,6 +124,17 @@ window.addEventListener('load', function() {
 <div class="card">
     <h2>ASESOR</h2>
     <div class="image-container" id="imageContainer">
+        
+        <!-- Menampilkan data asesor dari database -->
+        @foreach($asesor as $asesors)
+        <div class="image-item">
+            <div class="card-item">
+                <img src="{{ asset('storage/' . $asesors->image) }}" alt="Foto {{ $asesors->name }}">
+                <p>{{ $asesors->name }}</p>
+            </div>
+        </div>
+        @endforeach
+        <!-- 
         <div class="image-item">
             <div class="card-item">
                 <img src="{{ asset('gambar/A_la_Edena_Dharma_Putri__SE..png') }}" alt="Nama 1">
@@ -210,7 +221,7 @@ window.addEventListener('load', function() {
         <div class="image-item" data-src="gambar/Wanda_Lupita_Sari__S.Pd..png" data-desc="Nama 6">
             <img src="{{ asset('gambar/Wanda_Lupita_Sari__S.Pd..png') }}" alt="Nama 6">
             <p>Wanda Lupita Sari S.PD.</p>
-        </div>
+        </div> -->
         <!-- Tambahkan lebih banyak foto jika diperlukan -->
     </div>
     <div class="pagination" id="paginationContainer">

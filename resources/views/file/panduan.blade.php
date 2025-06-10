@@ -147,7 +147,19 @@
 
             <!-- Submenu -->
             <div class="submenu">
+                @foreach($panduanFiles as $file)
                 <div class="submenu-item" onclick="toggleDownloadCard(this)">
+                    <span class="submenu-title">
+                        {{ $file->nama_file }} <span class="arrow">&#9662;</span>
+                    </span>
+                    <div class="download-card hidden">
+                        <button class="download-button">
+                            <a href="{{ asset('storage/' . $file->file)  }}" download>Download File</a>
+                        </button>
+                    </div>
+                </div>
+                @endforeach
+                <!-- <div class="submenu-item" onclick="toggleDownloadCard(this)">
                     <span class="submenu-title">
                         Panduan Uji Kompetensi Skema JOO <span class="arrow">&#9662;</span>
                     </span>
@@ -216,7 +228,7 @@
                             <a href="../file/Panduan Uji Kompetensi Skema MGA.pdf" download>Download File</a>
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

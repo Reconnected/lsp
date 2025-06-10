@@ -377,11 +377,11 @@
         </center>
         <div class="stats">
             <div class="stat-item">
-                <h2>20</h2>
+                <h2>{{ $schools }}</h2>
                 <p>Sekolah</p>
             </div>
             <div class="stat-item">
-                <h2>8</h2>
+                <h2>{{ $universities }}</h2>
                 <p>Universitas</p>
             </div>
             <div class="stat-item">
