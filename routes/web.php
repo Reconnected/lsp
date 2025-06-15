@@ -56,6 +56,8 @@ Route::get('/kontakkami', [PesanController::class, 'index'])->name('kontakkami')
 
 //Define a Asesor route for storing the asesor
 Route::get('/asesor', [AsesorController::class, 'index'])->name('Asesor');
+// Route::get('/home', [AsesorController::class, 'amount'])->name('Asesor-Amount');
+// Route::get('/', [AsesorController::class, 'amount'])->name('Asesor-Amount');
 
 //Define a Tempat route for storing the TUK
 Route::get('/tempat', [TukController::class, 'index'])->name('tempat-uji');

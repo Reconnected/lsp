@@ -628,6 +628,10 @@ p {
     border-radius: 10px;
 }
 
+.profile-text {
+    text-align: justify;
+}
+
 .profile-content {
     max-width: 1200px;
     margin: 20px auto;
@@ -853,8 +857,8 @@ p {
     }
 
     .card-container {
-        justify-content: flex-start;
-        /* Align cards to the left */
+        justify-content: center;
+        /* Align cards to the center */
         gap: 15px;
         /* Add spacing between cards */
         flex-wrap: wrap;
@@ -866,8 +870,8 @@ p {
         /* Set width to 90% for better centering */
         max-width: 300px;
         /* Limit the maximum width */
-        height: auto;
-        /* Allow flexible height */
+        height: 100px;
+        /* Change flexible height */
         margin-bottom: 20px;
         /* Add space between cards */
     }
@@ -898,8 +902,8 @@ p {
     .card-container {
         flex-direction: column;
         /* Stack cards vertically on mobile */
-        align-items: flex-start;
-        /* Align cards to the left */
+        align-items: center;
+        /* Align cards to the center */
         gap: 20px;
         /* Add space between stacked cards */
     }
@@ -909,8 +913,8 @@ p {
         /* Set width to 90% for better centering */
         max-width: 350px;
         /* Limit the maximum width */
-        height: auto;
-        /* Remove fixed height for flexibility */
+        height: 80px;
+        /* Change height */
         margin: 0 0 20px;
         /* Center card and add bottom margin */
     }

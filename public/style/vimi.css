@@ -370,14 +370,26 @@ nav a.active:hover {
     color: black; /* Color of the text */
     text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6); /* Gray shadow effect */
     margin-bottom: 30px; /* Spacing below the title */
+    text-align: center;
    
 }
 
 .visi-misi-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.8rem;
+    text-align: center;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 25px;
     color: #333;
+    list-style-type: none;
+}
+
+.visi-misi-description li i{
+    margin-right: 0.8rem;
+    color: #2DB3E2;
 }
 
 .youtube-link {
@@ -458,6 +470,8 @@ nav a.active:hover {
     .visi-misi-description {
         font-size: 14px; /* Decrease description font size */
     }
+
+
 
     .youtube-link a {
         padding: 8px 16px; /* Adjust padding for buttons */
@@ -587,56 +601,80 @@ nav a.active:hover {
 }
 
 .team-container {
+    width: auto;
+    height: max-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 10%;
+    /* display: flex;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; */
 }
 
 .team-member {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 350px;
-    width: 100%;
+    /* padding: 20px; */
+    width: 250px;
     opacity: 0; /* Mulai dengan tidak terlihat */
     transform: translateY(50px); /* Mulai dari bawah */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #404be9;
-    margin-right: 20px;
+.member-image {
+    width: 100%;
+    height: 250px;
+    background-color: #caedfa;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
 }
 
 .member-info {
+    width: 100%;
+    height: max-content;
     text-align: center;
     flex: 1;
 }
 
 .member-info h3 {
+    width: auto;
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+    padding: 8px;
+    /* border: 1px solid black; */
 }
 
 .member-info p {
+    text-align: center;
     font-size: 16px;
     color: #777;
-    margin: 5px 0;
+    margin: 0;
+    /* border: 1px solid black; */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .team-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto 1fr;
+        justify-content: center;
+        align-content: center;
     }
     
     .team-member {
@@ -647,6 +685,12 @@ nav a.active:hover {
     .team-member img {
         margin-bottom: 15px;
         margin-right: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .team-container {
+        grid-template-columns: 1fr;
     }
 }
 

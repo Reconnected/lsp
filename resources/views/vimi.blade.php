@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('style/vimi.css') }}">
 
     <style>
@@ -53,8 +54,8 @@
         <a href="{{ url('home') }}" class="logo">
             <img src="{{ asset('gambar/lsp.png') }}" alt="Logo Perusahaan">
             <div class="logo-text">
-                <h1>Lembaga Sertifikasi Profesi</h1>
-                <h2>Informatika Signal Teknindo</h2>
+                <h1>LSP Signal</h1>
+                <h2>Informatika Teknindo</h2>
             </div>
         </a>
 
@@ -127,30 +128,21 @@ window.addEventListener('load', function() {
             </p>
             <h2 class="visi-misi-title">Misi</h2>
             <ul class="visi-misi-description">
-                <li>Melaksanakan sertifikasi kompetensi secara berkala.</li>
-                <li>Melaksanakan asesmen dengan menerapkan teknologi informasi komunikasi secara berkesinambungan.</li>
-                <li>Menjamin mutu dan proses dalam pelaksanaan asesmen sesuai pedoman.</li>
-                <li>Menjalin kerja sama dengan pihak BNSP dan lembaga lain.</li>
-                <li>Berkomitmen dalam pengelolaan asesmen dan menjaga integritas.</li>
+                <li><i class="bi bi-check-circle-fill"></i>Melaksanakan sertifikasi kompetensi secara berkala.</li>
+                <li><i class="bi bi-check-circle-fill"></i>Melaksanakan asesmen dengan menerapkan teknologi informasi komunikasi secara berkesinambungan.</li>
+                <li><i class="bi bi-check-circle-fill"></i>Menjamin mutu dan proses dalam pelaksanaan asesmen sesuai pedoman.</li>
+                <li><i class="bi bi-check-circle-fill"></i>Menjalin kerja sama dengan pihak BNSP dan lembaga lain.</li>
+                <li><i class="bi bi-check-circle-fill"></i>Berkomitmen dalam pengelolaan asesmen dan menjaga integritas.</li>
             </ul>
-        </div>
-        <div class="youtube-link">
-            <div class="youtube-video">
-                <iframe width="100%" height="100%"
-                    src="https://www.youtube.com/embed/w0RGnXpf9LU?si=IeO2s83dMv9Eq1dV" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <a href="https://www.youtube.com/watch?v=w0RGnXpf9LU" target="_blank">Tonton di YouTube</a>
         </div>
     </div>
     <section class="team">
         <h2>Our Team</h2>
         <div class="team-container">
-
             <div class="team-member ">
-                <img src="{{ asset('gambar/michael.png') }}" alt="A'la Edena Dharma Putri">
+                <div class="member-image">
+                    <img src="{{ asset('gambar/michael.png') }}" alt="Foto Michael S Sunggiardi">
+                </div>
                 <div class="member-info">
                     <h3>Michael S Sunggiardi</h3>
                     <p>Dewan Pengarah</p>
@@ -158,7 +150,9 @@ window.addEventListener('load', function() {
             </div>
 
             <div class="team-member ">
-                <img src="{{ asset('gambar/hani.png') }}" alt="A'la Edena Dharma Putri">
+                <div class="member-image">
+                    <img src="{{ asset('gambar/hani-new.png') }}" alt="Foto Hani Purnawanti">
+                </div>
                 <div class="member-info">
                     <h3>Hani Purnawanti</h3>
                     <p>Anggota Dewan Pengarah</p>
@@ -166,7 +160,9 @@ window.addEventListener('load', function() {
             </div>
 
             <div class="team-member">
-                <img src="{{ asset('gambar/ramadin.jpg') }}" alt="Ramadin Tarigan">
+                <div class="member-image">
+                    <img src="{{ asset('gambar/ramadin-new.png') }}" alt="Foto Ramadin Tarigan">
+                </div>
                 <div class="member-info">
                     <h3>Ramadin Tarigan</h3>
                     <p>Ketua LSP Informatika Signal Teknindo</p>
@@ -174,7 +170,9 @@ window.addEventListener('load', function() {
             </div>
 
             <div class="team-member reverse">
-                <img src="{{ asset('gambar/olan.jpg') }}" alt="Tuahta Hasiholan Pinem">
+                <div class="member-image">
+                    <img src="{{ asset('gambar/olan-new.png') }}" alt="Foto Tuahta Hasiholan Pinem">
+                </div>
                 <div class="member-info">
                     <h3>Tuahta Hasiholan Pinem</h3>
                     <p>Manajer Sertifikasi</p>
@@ -182,7 +180,9 @@ window.addEventListener('load', function() {
             </div>
 
             <div class="team-member">
-                <img src="{{ asset('gambar/verra.jpg') }}" alt="Verra Rousmawati">
+                <div class="member-image">
+                    <img src="{{ asset('gambar/verra-new.png') }}" alt="Foto Verra Rousmawati">
+                </div>
                 <div class="member-info">
                     <h3>Verra Rousmawati</h3>
                     <p>Manajer Manajemen Mutu</p>
@@ -190,7 +190,9 @@ window.addEventListener('load', function() {
             </div>
 
             <div class="team-member reverse">
-                <img src="{{ asset('gambar/Ika_Nuria_Rahmawati__A.Md.M..png') }}" alt="A'la Edena Dharma Putri">
+                <div class="member-image">
+                    <img src="{{ asset('gambar/Ika-new.png') }}" alt="Foto Ika Nuria">
+                </div>
                 <div class="member-info">
                     <h3>Ika Nuria Rahmawati</h3>
                     <p>Anggota Administrasi</p>

@@ -63,8 +63,8 @@
         <a href="{{ url('home') }}" class="logo">
             <img src="{{ asset('gambar/lsp.png') }}" alt="Logo Perusahaan">
             <div class="logo-text">
-                <h1>Lembaga Sertifikasi Profesi</h1>
-                <h2>Informatika Signal Teknindo</h2>
+                <h1>LSP Signal</h1>
+                <h2>Informatika Teknindo</h2>
             </div>
         </a>
 
@@ -385,11 +385,11 @@
                 <p>Universitas</p>
             </div>
             <div class="stat-item">
-                <h2>48</h2>
+                <h2>{{ $asesors }}</h2>
                 <p>Assesor</p>
             </div>
             <div class="stat-item">
-                <h2>28</h2>
+                <h2>{{ $asesis }}</h2>
                 <p>Asesi</p>
             </div>
         </div>

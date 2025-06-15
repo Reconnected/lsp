@@ -335,6 +335,7 @@ h1 {
 }
 
 .card {
+  /* height: 430px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Space between items */

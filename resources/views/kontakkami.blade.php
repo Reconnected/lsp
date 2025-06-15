@@ -54,8 +54,8 @@
         <a href="{{ url('home') }}" class="logo">
             <img src="{{ asset('gambar/lsp.png') }}" alt="Logo Perusahaan">
             <div class="logo-text">
-                <h1>Lembaga Sertifikasi Profesi</h1>
-                <h2>Informatika Signal Teknindo</h2>
+                <h1>LSP Signal</h1>
+                <h2>Informatika Teknindo</h2>
             </div>
         </a>
 
