@@ -14,7 +14,7 @@ class SkemaController extends Controller
      */
     public function index()
     {
-        $skemas = Skema::latest()->get();
+        $skemas = Skema::orderBy('created_at','asc')->get();
 
         return view('skema', compact('skemas'));
     }

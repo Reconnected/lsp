@@ -139,7 +139,7 @@
 
             <div class="section">
                 <div class="section-title">Deskripsi</div>
-                <p>{{ $skemaDetail->deksripsi_skema }}</p>
+                <p>{{ $skemaDetail->deskripsi_skema }}</p>
             </div>
 
             <div class="section">

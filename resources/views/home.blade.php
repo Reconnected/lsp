@@ -495,68 +495,22 @@
             </center>
             <div class="informasi-items">
                 <!-- Informasi Card 1 -->
-                <a href="{{ route('profesi') }}" class="informasi-item-link">
+                 @foreach($informations as $informasi)
+                <a href="{{ route('informasi.show', ['slug' => $informasi->slug]) }}" class="informasi-item-link">
                     <div class="informasi-item">
                         <div class="informasi-image">
-                            <img src="{{ asset('gambar/profesi.jpg') }}" alt="Informasi Image 1">
+                            <img src="{{ asset('storage/' . $informasi->image) }}" alt="Informasi Image 1">
                         </div>
                         <div class="informasi-content">
-                            <h3>Sertifikasi Profesi di Mata Dunia</h3>
+                            <h3>{{ $informasi->judul }}</h3>
                             <div class="informasi-meta">
                                 <i class="far fa-calendar-alt"></i>
-                                <span>November 8, 2024</span>
+                                <span>{{ $informasi->tgl_publish->format('d M Y') }}</span>
                             </div>
                         </div>
                     </div>
                 </a>
-
-                <!-- Informasi Card 2 -->
-                <a href="{{ route('Badan-Nasional') }}" class="informasi-item-link">
-                    <div class="informasi-item">
-                        <div class="informasi-image">
-                            <img src="{{ asset('gambar/sertifikasi.jpg') }}" alt="Informasi Image 2">
-                        </div>
-                        <div class="informasi-content">
-                            <h3>Badan Nasional Sertifikasi Profesi (BNSP)</h3>
-                            <div class="informasi-meta">
-                                <i class="far fa-calendar-alt"></i>
-                                <span>November 15, 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Informasi Card 3 -->
-                <a href="{{ route('Dasar-Hukum') }}" class="informasi-item-link">
-                    <div class="informasi-item">
-                        <div class="informasi-image">
-                            <img src="{{ asset('gambar/hukum.jpg') }}" alt="Informasi Image 3">
-                        </div>
-                        <div class="informasi-content">
-                            <h3>Dasar Hukum BNSP dan LSP</h3>
-                            <div class="informasi-meta">
-                                <i class="far fa-calendar-alt"></i>
-                                <span>November 20, 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Informasi Card 4 -->
-                <a href="{{ route('Sertifikasi-Kompetensi') }}" class="informasi-item-link">
-                    <div class="informasi-item">
-                        <div class="informasi-image">
-                            <img src="{{ asset('gambar/skil.jpg') }}" alt="Informasi Image 4">
-                        </div>
-                        <div class="informasi-content">
-                            <h3>Sertifikasi Kompetensi Penting untuk Kamu</h3>
-                            <div class="informasi-meta">
-                                <i class="far fa-calendar-alt"></i>
-                                <span>November 24, 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                @endforeach
             </div>
         </div>
     </section>
