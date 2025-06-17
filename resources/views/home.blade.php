@@ -373,7 +373,7 @@
 
     <div class="container">
         <center>
-            <h1>More than 1 Years of Experience</h1>
+            <h1>Berpengalaman Lebih dari 1 Tahun</h1>
         </center>
         <div class="stats">
             <div class="stat-item">
