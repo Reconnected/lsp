@@ -316,7 +316,7 @@ nav a.active:hover {
 .informasi img {
   width: 100%; /* Gambar mengisi lebar kontainer */
   height: auto; /* Menjaga proporsi gambar */
-  max-height: 500px; /* Membatasi tinggi maksimum */
+  max-height: 700px; /* Membatasi tinggi maksimum */
   object-fit: cover; /* Menyesuaikan isi gambar */
   border-radius: 8px; /* Menambahkan border radius */
 }

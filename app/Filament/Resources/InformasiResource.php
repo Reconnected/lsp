@@ -61,8 +61,7 @@ class InformasiResource extends Resource
                         ->required()
                         ->panelAspectRatio('4:1')
                         ->panelLayout('integrated')
-                        ->imageResizeMode('cover')
-                        ->imageCropAspectRatio('16:9'),
+                        ->imageResizeMode('contain'),
                 ]),
             ]);
     }
@@ -73,7 +72,8 @@ class InformasiResource extends Resource
                 Tables\Columns\TextColumn::make('judul'),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\ImageColumn::make('image')
-                    ->label('Image'),
+                    ->label('Image')
+                    ->square(),
                 Tables\Columns\TextColumn::make('konten_informasi')
                     ->limit(15),
                 Tables\Columns\TextColumn::make('tgl_publish')

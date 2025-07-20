@@ -123,17 +123,17 @@ window.addEventListener('load', function() {
         <div class="informasi-content">
         </div>
         <div class="profile-image">
-            <img src="{{ asset('storage/' . $information->image) }}" alt="Profile Picture">
+            <img src="{{ asset('storage/' . $informationSlug->image) }}" alt="Profile Picture">
         </div>
         <div class="informasi-content">
-            <h1>{{ $information->judul }}</h1>
-            <p>{!! Str::markdown($information->konten_informasi) !!}</p>
+            <h1>{{ $informationSlug->judul }}</h1>
+            <p>{!! Str::markdown($informationSlug->konten_informasi) !!}</p>
             <!-- <p>Badan Nasional Sertifikasi Profesi disingkat (BNSP) adalah sebuah lembaga independen yang dibentuk pemerintah untuk melaksanakan ketentuan Pasal 18 ayat (5) Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan. Badan ini bekerja untuk menjamin mutu kompetensi dan pengakuan tenaga kerja pada seluruh sektor bidang profesi di Indonesia melalui proses sertifikasi kompetensi kerja bagi tenaga kerja, baik yang berasal dari lulusan pelatihan kerja maupun dari pengalaman kerja.</p>
             <p>Tugas pokok dan fungsi BNSP sebagai otoritas sertifikasi personel sesuai Peraturan Pemerintah Nomor 23 Tahun 2004 tentang Badan Nasional Sertifikasi Profesi, utamanya pasal 4 Ayat 1): Guna terlaksananya tugas sertifikasi kompetensi kerja sebagaimana dimaksud dalam Pasal 3, BNSP dapat memberikan lisensi kepada lembaga sertifikasi profesi yang memenuhi persyaratan yang ditetapkan untuk melaksanakan sertifikasi kompetensi kerja. Ayat 2): Ketentuan mengenai persyaratan dan tata cara pemberian lisensi lembaga sertifikasi profesi sebagaimana dimaksud dalam ayat 1) ditetapkan lebih lanjut oleh BNSP.</p> -->
-            <p><strong>Sumber: {{ $information->sumber }}</strong></p>
+            <p><strong>Sumber: {{ $informationSlug->sumber }}</strong></p>
         </div>
         <div class="publication-details">
-            <p>Published on: <strong>{{ $information->tgl_publish->format('d M Y') }}</strong></p>
+            <p>Published on: <strong>{{ $informationSlug->tgl_publish->format('d M Y') }}</strong></p>
         </div>
     </div>
 </section>

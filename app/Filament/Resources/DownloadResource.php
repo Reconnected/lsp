@@ -65,7 +65,8 @@ class DownloadResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama_file'),
                 Tables\Columns\TextColumn::make('kategori'),
-                Tables\Columns\TextColumn::make('file'),
+                Tables\Columns\TextColumn::make('file')
+                    ->limit(10),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')

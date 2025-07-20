@@ -22,6 +22,8 @@ use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\SkemaController;
+use App\Http\Controllers\PengalamanController;
+use App\Http\Controllers\HomeController;
 
 
 Route::get('/', [PageController::class, 'home'])->name('home');
@@ -66,8 +68,12 @@ Route::get('/tempat', [TukController::class, 'index'])->name('tempat-uji');
 Route::get('/kerjasama', [KerjasamaController::class, 'index'])->name('Kerja-Sama');
 
 // Define a Home route for storing the amount of Sekolah and Universitas
-Route::get('/', [SekolahController::class, 'amount'])->name('home');
-Route::get('/home', [SekolahController::class, 'amount'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+// Define a Home route for storing the first data of experience
+// Route::get('/', [PengalamanController::class, 'showFirstData'])->name('home');
+// Route::get('/home', [PengalamanController::class, 'showFirstData'])->name('home');
 
 // Define a Informasi route for storing the amount of informasi artikel
 Route::get('/informasi', [InformasiController::class, 'index'])->name('informasi');

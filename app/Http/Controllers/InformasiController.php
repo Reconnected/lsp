@@ -4,22 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Informasi;
+use App\Services\InformasiServices;
 
 class InformasiController extends Controller
 {
     //
 
-    public function index(){
+    public function index(InformasiServices $informasiServices){
 
-        $informations = Informasi::latest()->get();
+        $informations = $informasiServices->getAllData();
 
         return view('informasi', compact('informations'));
     }
 
-    public function show($slug){
+    public function show(InformasiServices $informasiServices ,string $slug){
 
-        $information = Informasi::where('slug', $slug)->firstOrFail();
+        $informationSlug = $informasiServices->getDataBySlug($slug);
 
-        return view('informasi.show', compact('information'));
+        return view('informasi.show', compact('informationSlug'));
     }
 }

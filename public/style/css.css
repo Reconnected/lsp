@@ -1141,6 +1141,9 @@ p {
 .container {
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .strategi-items {
@@ -1249,6 +1252,8 @@ p {
     /* Four columns */
     gap: 20px;
     /* Gap between each card */
+
+    margin-bottom: 1rem;
 }
 
 /* Informasi Item (Card) Styling */
@@ -1264,6 +1269,7 @@ p {
     flex-direction: column;
     /* Stack child elements vertically */
     height: 350px;
+    width: 300px;
     /* Set a fixed height for the card */
     opacity: 0;
     /* Start fully transparent */
@@ -1335,6 +1341,12 @@ p {
     margin: 10px 0;
     font-size: 1.2rem;
     color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    border: 1px solid;
 }
 
 /* Informasi Meta (Date and Icon) */
@@ -1703,4 +1715,21 @@ p {
     margin-left: 0;
   }
 
+}
+
+button {
+  background-color: #837ce7; /* Warna latar belakang button */
+  color: white; /* Warna teks button */
+  border: none; /* Menghilangkan border */
+  padding: 10px 15px; /* Padding untuk button */
+  text-align: center; /* Memusatkan teks dalam button */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  display: inline-block; /* Menjadikan button berada di baris yang sama */
+  margin: 5px; /* Jarak antar button */
+  cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
+  border-radius: 5px; /* Membulatkan sudut button */
+}
+
+button:hover {
+  background-color: #4645a0; /* Warna button saat hover */
 }

@@ -373,24 +373,28 @@
 
     <div class="container">
         <center>
-            <h1>Berpengalaman Lebih dari 1 Tahun</h1>
+            <h1>Berpengalaman Lebih dari 2 Tahun</h1>
         </center>
         <div class="stats">
             <div class="stat-item">
-                <h2>{{ $schools }}</h2>
+                <h2>{{ $pengalaman->total_sekolah }}</h2>
                 <p>Sekolah</p>
             </div>
             <div class="stat-item">
-                <h2>{{ $universities }}</h2>
+                <h2>{{ $pengalaman->total_universitas }}</h2>
                 <p>Universitas</p>
             </div>
             <div class="stat-item">
-                <h2>{{ $asesors }}</h2>
+                <h2>{{ $pengalaman->total_asesor }}</h2>
                 <p>Assesor</p>
             </div>
             <div class="stat-item">
-                <h2>{{ $asesis }}</h2>
+                <h2>{{ $pengalaman->total_asesi }}</h2>
                 <p>Asesi</p>
+            </div>
+            <div class="stat-item">
+                <h2>{{ $pengalaman->lembaga_pelatihan }}</h2>
+                <p>Lembaga Pelatihan</p>
             </div>
         </div>
     </div>
@@ -535,6 +539,26 @@
             window.addEventListener('scroll', handleScroll);
             handleScroll(); // Call on initial load to check if the items are visible
         });
+
+        const imagePerPage = 8;
+        let currentPage = 1;
+
+        function showImage(page) {
+            const imageItems = document.querySelectorAll('.informasi-item');
+            const totalPages = Math.ceil(imageItems.length / imagePerPage);
+            const startIndex = (page - 1) * imagePerPage;
+            const endIndex = startIndex + imagePerPage;
+
+            imageItems.forEach((imageItem, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    imageItem.style.display = 'block';
+                } else {
+                    imageItem.style.display = 'none';
+                }
+            });
+        }
+
+        showImage(currentPage);
     </script>
 
 

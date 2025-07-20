@@ -205,10 +205,14 @@ window.addEventListener('load', function() {
                     </div>
                 </a> -->
             </div>
+            <div class="pagination" id="paginationContainer">
+                <p>tes</p>
+            </div>
         </div>
     </section>
 
     <script>
+    
         document.addEventListener('DOMContentLoaded', function() {
         const informasiItems = document.querySelectorAll('.informasi-item'); // Select all items
     
@@ -228,7 +232,59 @@ window.addEventListener('load', function() {
     
         window.addEventListener('scroll', handleScroll);
         handleScroll(); // Call on initial load to check if the items are visible
-    });
+        });
+
+        const imagePerPage = 12;
+        let currentPage = 1;
+
+        function showImage(page) {
+            const imageItems = document.querySelectorAll('.informasi-item');
+            const totalPages = Math.ceil(imageItems.length / imagePerPage);
+            const startIndex = (page - 1) * imagePerPage;
+            const endIndex = startIndex + imagePerPage;
+
+            imageItems.forEach((imageItem, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    imageItem.style.display = 'block';
+                } else {
+                    imageItem.style.display = 'none';
+                }
+            });
+
+            createPagination(totalPages)
+        }
+
+        function createPagination(totalPages) {
+            const paginationContainer = document.getElementById('paginationContainer');
+            paginationContainer.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.classList.add('page-number');
+                button.textContent = i;
+                button.addEventListener('click', function () {
+                    currentPage = i;
+                    showImage(currentPage);
+                    hightlightCurrentPage();
+                });
+
+                paginationContainer.appendChild(button);
+            };
+
+            hightlightCurrentPage();
+        }
+
+        function hightlightCurrentPage() {
+            const buttons = document.querySelectorAll('.page-number');
+            buttons.forEach(button => {
+                button.style.color = '#404be9';
+                if (parseInt(button.textContent) === currentPage) {
+                    button.style.color = '#1e30cc';
+                }
+            });
+        }
+
+        showImage(currentPage);
     
     </script>
 

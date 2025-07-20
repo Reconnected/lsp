@@ -230,7 +230,7 @@ window.addEventListener('load', function() {
 </div>
 
 <script>
-    const imagesPerPage = 6; // Batasan gambar per halaman
+    const imagesPerPage = 8; // Batasan gambar per halaman
     let currentPage = 1;
 
     // Fungsi untuk menampilkan gambar berdasarkan halaman
