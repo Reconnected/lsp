@@ -122,12 +122,6 @@ class AsesiResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            // ->headerActions([
-            //     Tables\Actions\Action::make('uploadCSV')
-            //     ->label('Upload CSV')
-            //     ->action(fn (Asesi $file) => $file->save())
-            //     ->modalContent(view('filament.custom.upload-data'))
-            // ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
