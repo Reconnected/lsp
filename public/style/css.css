@@ -1346,7 +1346,7 @@ p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    border: 1px solid;
+    line-clamp: 2;
 }
 
 /* Informasi Meta (Date and Icon) */
